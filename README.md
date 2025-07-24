@@ -1,3 +1,11 @@
+### This Branch of Evangard works with an Older Version of Libre-Office (6.4.7.2, which shipped with Ubuntu 20.04LTS). 
+
+While it has some developments for later Libre-Office features, None that break LO 6 compatibility. 
+
+Things that work differently in later LibreOffice : 
+  . frame borders don't seem to specifically respond to widths in points the way LO6 does... IE... the import seems to either make them all a default width or one of a few widths.  LO 6 did some kind of transform into it's native unit, but the result was clearly a rounding error and not a selection from a list of 'ms compatible' widths. 
+
+
 # AV Evangard Publishing Tools
 _Build a better Libre Office Writer document._
 
