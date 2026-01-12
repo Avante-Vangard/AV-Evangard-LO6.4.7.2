@@ -1,0 +1,41 @@
+	
+	Scope
+	"This Workbook provides an output of an OpenDocument Stylesheet, which can be preprended to a ODF tagged text file created with the Evangard macro ""AV Convert p.SFM to OO"". This macro works when the file to convert is displayed in Jedit 5.7 or higher."
+	
+	Overview of Steps to Generate Stylesheet
+	1. Defining the Font scaling.
+	2. Defining the Basic Page Settings.
+	3. Customizing a layout.
+	4. Copying and saving your stylesheet.
+	
+	Step 0. Introductory Information
+	AutoCalc is off! This means the worksheet only updates when you select Data -> Calculate -> Recalculate, which has a shortcut of F9 on my installation of LibreOffice. Due to the complexity of this workbook, make sure you recalculate several times prior to verifying or copying out the stylesheet. 
+	LibreOffice is (probably) required. I've used Excel and OpenOffice Calc for tasks like this (targeting LibreOffice, OpenOffice Writer, and inDesign,) but currently run this sheet on LibreOffice 6.4.7.2 prepackaged in Ubuntu 20.04 LTS. I'm sure changes will be required to make this work in Excel, and expect that Open Office will also have trouble. LibreOffice has no cost, and has generous licensing, so your best bet is to just install it. 
+	IDX columns are sorted. Each IDX column must remain sorted in increasing alphabetical order, and several have null rows to debug issues.  the LOOKUP function in LibreOffice is used, and it requires incremental values in the index field. If and when you start adding new IDX values,  remember that the fields are sorted on IDX and must be done so.  Also, resorting the field may mess up the lookup function on other pages. Good Luck with that.
+	This is a pretty complex process. You'll need a good grasp of USFM, page layout, and using spreadsheets to get through this. I want to help. I'm completely unfunded, and have to eat, so good luck getting my attention if this doesn't work, or has issues. That means ask if you  have trouble. The Wiki and issues links on Git hub for this project are the best place to start. 
+	
+	Step 1. Defining the fonts for your work.
+	This worksheet follows the font methodology that each work will have five general types of lettering: body (serif), sans, caption, Titling, and 'Note' (handwriting.) Each style of font is further defined into weights and skew. Weight is not size but rather thickness of the strokes. Each style has an Index letter (B,C,S,T,V) and each weight has a Index number (01-99). Odd numbered weights indicate skewed text (Oblique or Italics.) This font index number is used in the 'Face' Column of the Tag List worksheet to describe the face and weight associated with each p.SFM tag. Note that the Font index only defines the font family, weight and skew. Letter spacing and text size are defined in step 2. 
+	   If changes are desired, It is likely most appropriate to change one of the font worksheets, included in a subdirectory.
+	   The columns E and F of the Active Font worksheet represent The font of the text that will end up in the Opendocument Stylesheet for that style. If you want to use a different font, I suggest you define a paragraph style in LibreOffice with each font to be used, and export a Flat Opendocument file.  This flat opendocument file can be viewed to understand the spelling that is required for font names within Evangard.
+	   The columns G and H of the font worksheets represent scaling percentages. null and 100 are the same. less than 100 shrinks the text, more than 100 expands the text. In order for the math on the cyan “Base Pts” worksheet to work, it is important to match the height and the width of a capital X to the height and width of a capital X from the Font “Noto” which is available on Google Fonts. I use indesign at extreme magnifications and guidelines dragged in to accomplish the height. I use Many XXX in a row on 2 rows of text to accomplish the width. The horixontal appearance is not as critical as the height, and should be used to maintain the look of the font while shaping it to fit into a long book. 
+	   Column I is included to allow the use of the skew parameter in LibreOffice Writer to create faux Oblique text if a true italic font is not available. This should be used in non-body text fields only (Titles, Captions, Handwriting fields). 
+	   Once the fonts are defined on a font worksheet, copy Columns A-J to the Active Fonts worksheet, colored lavendar. 
+	
+	Step 2. Defining the Configuration Settings
+	   The Basic Page Settings on the 'Conf' worksheet create a text structure that will allow for registered text.  What this means is that the fonts are all multiples in a way that the text on the back of a leaf of the work won't bother the reader with different size rows of text. To accomplish this, you only enter 3 parameters for all fonts: 1. base text pts, 2. Leading factor, 3, Incremental text Scaling factor. 
+	The Base Pt Size is currently defined to 10 pts. This is strictly for debugging. Set it to the size that fits your project
+	   The leading is currently defined to cube root of 2, but this is an anomoly of the Cormorant font. The formula for optimum leading is actually more about the length of the row of text:
+	" 
+Leading Ratio = Cube root of 1+((column width (in pts)/font size (in pts)/.6 (avg width of characters as a multiple the font size if known.)/35 (characters in a unit of increasing leading.)
+"
+	but since the worksheet and stylesheet are not aware of the text column width, leading is generalized for a 2 column layout. 
+	   The scaling factor is currently defined to the quad root of 2. This is about as tight as you can get and still optically see the difference in the text levels. Bigger means the Title text renders multiples bigger. 
+	   Input Parameters -- on the Basic Page worksheet, column C contains input values for the Style sheet.  Do you need Hyphenation?  You can enable or disable it at Cell C13.  Don't like way hyphenation works? play with the hyphenation engine values From C115-C144. This is still a pre-beta version of the generator, so these parameters may not function as expected, if at all. 
+	   Style IDX Values -- On the Basic Page Worksheet, Columns G, M, and Q contain IDX values for the HOR, VERT and OTH parameters on the ACTIVE SFM Styles worksheet. If you need to customize a specific tag, it can be changed by entering a new IDX value that appears on the Basic Page or Active Fonts worksheets. 
+	
+	Step 3. Customizing a Layout
+	   If you need to change the way a tag is rendered in indesign, you can adjust it's IDX Values for the FACE, HORZ, VERT, and OTH column on the Active SFM Styles page. Be sure to keep a copy of the styles page for anything that goes to production. This is a stub to be expanded later.
+	
+	Step 4. Output the Stylesheet
+	   When you're ready to output the stylesheet, Column A of the the worksheet LO-Stylesheet (green) contains the output. On this worksheet, select cells that have values and copy. switch to a text editor and paste. Note that ID Tag Text has all sorts of quirks about Unicode. Depending on your system, you may find that codes used by HTML/XML aren't properly trapped.  What I did works for me on Ubuntu... Mac and Windows are outside of my focus area. 

@@ -1,31 +1,31 @@
 .														.	.	.				.
 2		"=""AV Evangard Stylesheet Generator v""&RIGHT(YEAR(NOW()),2)&RIGHT(""0""&MONTH(NOW()),2)"																		
 3		"=""Font List: ""&'Font List'.$D$1&"" Tag List: ""&'Tag List'.$A$1"																		
-4		"=""Body Text: ""&$D$7&""/""&$D$26&"" | L4: ""&$'Base Pts'.$H$20&""/""&$'Base Pts'.$I$20&"" | L9: ""&$'Base Pts'.$H$25&""/""&$'Base Pts'.$I$25&"" page: ""&D20&"" x ""&D21"																		
+4		"=""Body Text: ""&$D$7&""/""&$D$26&"" | L40: ""&$'Base Pts'.$H$20&""/""&$'Base Pts'.$I$20&"" | L90: ""&$'Base Pts'.$H$25&""/""&$'Base Pts'.$I$25&"" page: ""&D20&"" x ""&D21"																		
 																				
 6		Basic Layout																		
-7		Pt Size	10			Pt Size by page dim														
-8		Leading Ratio	1.06	Multiplier for leading		55	Number of text Rows													
+7		Pt Size	11			Pt Size by page dim														
+8		Leading Ratio	1.12	Multiplier for leading		38	Number of text Rows													
 9		Scaling Ratio	=POWER(2,1/4)	Text Levels Increase by this		=((D21/25.4*72)-(D23*2)-((D45+D43+D43)*D38)-((D56+D54+D54)*D49))/G8/D8	Base pt size													
 10																				
 11		 Body Text Columns?	2	Body Text columns		Bit level settings														
-12		Justify?	2	"=""[0-3] ""&IF(ISEVEN(D12),""Strictly "",""Optically "")&IF(D12>1,""Justified"",""Ragged"")"		=DEC2BIN(D12,5)	=LEFT(G12,1)	=MID(G12,2,1)	=MID(G12,3,1)	=MID(G12,4,1)	=RIGHT(G12,1)									
+12		Justify?	3	"=""[0-3] ""&IF(ISEVEN(D12),""Strictly "",""Optically "")&IF(D12>1,""Justified"",""Ragged"")"		=DEC2BIN(D12,5)	=LEFT(G12,1)	=MID(G12,2,1)	=MID(G12,3,1)	=MID(G12,4,1)	=RIGHT(G12,1)									
 13		Hyphenate?	1	"=IF(D13=1,""(1=YES): 0=No"",""1=Yes: (0=NO)"")"		=DEC2BIN(D13,5)	=LEFT(G13,1)	=MID(G13,2,1)	=MID(G13,3,1)	=MID(G13,4,1)	=RIGHT(G13,1)									
 14		Ligatures?	1	"=""[0-15] ""&IF(I14=""1"",""(hlig) "","" hlig "")&IF(J14=""1"",""(clig) "","" clig "")&IF(K14=""1"",""(dlig) "","" dlig "")&IF(L14=""1"",""(liga) "","" liga "")"		=DEC2BIN(D14,5)	=LEFT(G14,1)	=MID(G14,2,1)	=MID(G14,3,1)	=MID(G14,4,1)	=RIGHT(G14,1)									
-15		Figure Style?	3	"=""[0-3] ""&IF(ISODD(D15),""Proportional "",""Tabular "")&IF(D15<2,""Oldstyle"",""Lining"")"		=DEC2BIN(D15,5)	=LEFT(G15,1)	=1-(VALUE(MID(G15,5,1)))	=1-(VALUE(MID(G15,4,1)))	=MID(G15,4,1)	=RIGHT(G15,1)									
+15		Figure Style?	3	"=""[0-3] ""&IF(ISODD(D15),""Proportional "",""Tabular "")&IF(D15<2,""Oldstyle"",""Lining"")"		=DEC2BIN(D15,5)	=LEFT(G15,1)			=MID(G15,4,1)	=RIGHT(G15,1)									
 16		Drop Caps?	2	Text rows																
-17		Run-in Scripture Books?	1	"=""[0-1] ""&IF(D17=0,""Page"",""Section"")&"" break at id tag"""																
-																				
+17		Run-in Scripture Books?	0	"=""[0-1] ""&IF(D17=0,""Page"",""Section"")&"" break at id tag"""																
+																.				.
 19		Page Dimensions															Reference Page Dimensions			
 20		X page	152.4	mm		=D20/25.4	x	=D21/25.4			=D20/25.4*72						Name	X Page	Y Page	
 21		Y page	228.6	mm		Page Info					=ROUND(D21/25.4*72)						A4 (8.26 x 11.69)	=ROUND(8.26*25.4*10)/10	=ROUND(11.69*25.4*10)/10	
-22		Inside edge	=18/32*72	pt		2.75	Char Density (char/em)										A5 (5.69 x 8.26)	=ROUND((11.69/2)*25.4*10)/10	=ROUND(8.26*25.4*10)/10	
-23		Outside Edges	=7/16*72	pt		=(($D$20/25.4*72)-($D$22+$D$23+$D$25*($D$11-1)))/$D$11	Text row (pts)				=L20-D22-D23						Letter (8.5 x 11)	=ROUND(8.5*25.4*10)/10	=ROUND(11*25.4*10)/10	
-24						=INT(G23/$D$26*G22)	Text row (chars)										POD Half Lgl (6.25 x 8.25)	=ROUND(6.25*25.4*10)/10	=ROUND(8.25*25.4*10)/10	
-25		Column gutter	=D7*D9*D8	pt		=(($D$21/25.4*72-2*$D$23-$D$45*$D$38-$D$56*$D$49)/$D$26)*$D$11	Text rows/page				=INT((D21/25.4*72)-2*D23-(D45+D43*2)-(D56+2*D54))						Half Letter (5.5 x 8.5)	=ROUND(5.5*25.4*10)/10	=ROUND(8.5*25.4*10)/10	
-26		Embox	=INT(D7*D8*10)/10	pt^2		=G24*G25/5*0.9	words/page										KDP Max (7.44 x 10.1)	=ROUND(7.44*25.4*10)/10	=ROUND(10.195*25.4*10)/10	
+22		Inside edge	50	pt		2.75	Char Density (char/em)										A5 (5.84 x 8.26)	=ROUND((11.69/2)*25.4*10)/10	=ROUND(8.26*25.4*10)/10	
+23		Outside Edges	40	pt		=(($D$20/25.4*72)-($D$22+$D$23+$D$25*($D$11-1)))/$D$11	Text row (pts)				=(L20-D22-D23-(D25*(D11-1)))/D11						Letter (8.5 x 11)	=ROUND(8.5*25.4*10)/10	=ROUND(11*25.4*10)/10	
+24						=INT(G23/$D$26*G22)	Text row (chars)										Half Legal (6.25 x 8.25)	=ROUND(6.25*25.4*10)/10	=ROUND(8.25*25.4*10)/10	
+25		Column gutter	12	pt		=(($D$21/25.4*72-2*$D$23-$D$45*$D$38-$D$56*$D$49)/$D$26)*$D$11	Text rows/page				=INT((D21/25.4*72)-2*D23-(D45+D43*2)-(D56+2*D54))						Half Letter (5.5 x 8.5)	=ROUND(5.5*25.4*10)/10	=ROUND(8.5*25.4*10)/10	
+26		Embox	=ROUND(D7*D8*100)/100	pt^2		=G24*G25/5*0.9	words/page										KDP Max (7.44 x 10.1)	=ROUND(7.44*25.4*10)/10	=ROUND(10.195*25.4*10)/10	
 27		Registration Ref Style	m			=760000/G26*1.1	Estimated Text Bible										Snowfall (6 x 9)	=ROUND(6*25.4*10)/10	=ROUND(9*25.4*10)/10	
-28																				
+28																	Devo (5 x 8)	=ROUND(5*25.4*10)/10	=ROUND(8*25.4*10)/10	
 																				
 																				
 31		Page Background																		
@@ -41,7 +41,7 @@
 41		Left Margin	0	pts																
 42		Right Margin	0	pts																
 43		Spacing Above & Below	1	pts																
-44		Dynamic Spacing	1	"=""[0,1] Header grows into ""&IF(D44=1,""text "",""header "")&""area."""							"=IF(D44=1,""true"",""false"")"									
+44		Dynamic Spacing	0	"=""[0,1] Header grows into ""&IF(D44=1,""text "",""header "")&""area."""							"=IF(D44=1,""true"",""false"")"									
 45		Height	=(INT($D$7*$D$8*10)/10+2*$D$43)+($D$62*SUM(VALUE($I$65),VALUE($J$65)))	pts																
 46		Header/Footer Text Style	ms9																	
 47		Single/Odd Header Text	"<text:variable-get text:name=""h1""/><text:tab/><text:page-number text:select-page=""current"">0</text:page-number><text:tab/><text:variable-get text:name=""h""/><text:s/><text:variable-get text:name=""cn""/>"																	
@@ -54,14 +54,14 @@
 0		Spacing Above & Below	1	pts																
 55		Dynamic Spacing	1	"=""[0,1] Footer grows into ""&IF(D55=1,""text "",""footer "")&""area."""							"=IF(D55=1,""true"",""false"")"									
 56		Height	=(INT($D$7*$D$8*10)/10+2*$D$43)+($D$62*SUM(VALUE($I$66),VALUE($J$66)))																	
-57		Single/Odd Footer Text	"<text:tab/><text:page-number text:select-page=""current"">0</text:page-number><text:tab/><text:variable-get text:name=""h""/><text:s/><text:variable-get text:name=""cn""/>"																	
-58		Even Footer Text	"<text:page-number text:select-page=""current"">0</text:page-number><text:tab/><text:tab/><text:variable-get text:name=""h4""/><text:s/>"																	
+57		Single/Odd Footer Text	"<text:tab/><text:tab/><text:variable-get text:name=""h5""/> : <text:page-number text:select-page=""current"">0</text:page-number>"																	
+58		Even Footer Text	"<text:page-number text:select-page=""current"">0</text:page-number> : <text:variable-get text:name=""h4""/><text:tab/><text:tab/>"																	
 59		Separator Options																		
 60		 Default Separator Style	1	"=""(0-3): ""&D60&""-""&IF(D60=1,""LINE"",IF(D60=2,""DOTTED"",IF(D60=3,"" DASH"","" NONE"")))"							"=IF(D60=1,""solid"",IF(D60=2,""dotted"",IF(D60=3,"" dashed"","" none"")))"									
 61		Separator Color	c0c0c0	[HTML Color]							"=RIGHT(""000000""&$D61,6)"									
-62		Separator weight	0.8	pts																
+62		Separator weight	0.8	pts							"=RIGHT(""1.0000""&$D62,6)"									
 63						Bit level		T	B	R	L									
-64		Page Frame	8	"=""[0-15] ""&IF($I64=""1"",""T"","""")&IF($J64=""1"",""B"","""")&IF($K64=""1"",""L"","""")&IF($L64=""1"",""R"","""")"		=DEC2BIN(D64,5)		=MID(G64,2,1)	=MID(G64,3,1)	=MID(G64,4,1)	=RIGHT(G64,1)									
+64		Page Frame	0	"=""[0-15] ""&IF($I64=""1"",""T"","""")&IF($J64=""1"",""B"","""")&IF($K64=""1"",""L"","""")&IF($L64=""1"",""R"","""")"		=DEC2BIN(D64,5)		=MID(G64,2,1)	=MID(G64,3,1)	=MID(G64,4,1)	=RIGHT(G64,1)									
 65		Header Frame	4	"=""[0-15] ""&IF($I65=""1"",""T"","""")&IF($J65=""1"",""B"","""")&IF($K65=""1"",""L"","""")&IF($L65=""1"",""R"","""")"		=DEC2BIN(D65,5)		=MID(G65,2,1)	=MID(G65,3,1)	=MID(G65,4,1)	=RIGHT(G65,1)									
 66		Footer Frame	8	"=""[0-15] ""&IF($I66=""1"",""T"","""")&IF($J66=""1"",""B"","""")&IF($K66=""1"",""L"","""")&IF($L66=""1"",""R"","""")"		=DEC2BIN(D66,5)		=MID(G66,2,1)	=MID(G66,3,1)	=MID(G66,4,1)	=RIGHT(G66,1)									
 67		Column Separator	1	"=""[0-1] ""&IF($I67=""1"",""T"","""")&IF($J67=""1"",""B"","""")&IF($K67=""1"",""L"","""")&IF($L67=""1"",""R"","""")"		=DEC2BIN(D67,5)		=MID(G67,2,1)	=MID(G67,3,1)	=MID(G67,4,1)	=RIGHT(G67,1)									
@@ -112,22 +112,22 @@
 																				
 																				
 																				
-115		Advanced Composition																		
+115		Advanced Composition Options																		
 116		Language Settings																		
 117		Western Language	en	ISO639																
 118		Western Country	us	ISO3166																
 119		Asian Language	zh	ISO639																
 120		Asian Country	cn	ISO3166																
-121		CTL Language	hi	ISO639	LibreOffice 7.4 Composition Settings															
+121		CTL Language	hi	ISO639	LibreOffice 7.4 Hyphenation Options															
 122		CTL Country	in	ISO3166	Keep across page						page	"=IF(L122=1,""true"",""false"")"								
 123		Hyphenation Options			Keep last word						1	"=IF(L123=1,""true"",""false"")"								
 124		Keep before split	3	Letters	Keep ALLCAP words						1	"=IF(L124=1,""true"",""false"")"								
 125		Keep after split	3	Letters	Keep min word						6	Letters								
-126		Max consecutive	2	Rows	Hyphenation Zone						=INT($G$23/3)*20		mEm							
+126		Max consecutive	2	Rows	Hyphenation Zone						=INT($G$23/3)*20		Twip							
 127		Composition Options																		
-128		Legacy Spacing	0	"=""[0,1] ""&IF(D128=1,""Legacy "",""Common "")&""Spacing active."""							"=IF(D128=1,""true"",""false"")"									
-129		Legacy Wrapping	0	"=""[0,1] ""&IF(D129=1,""Legacy "",""Common "")&""Wrap active."""							"=IF(D129=1,""true"",""false"")"									
-130		Legacy Positioning	0	"=""[0,1] ""&IF(D130=1,""Legacy "",""Common "")&""Pos active."""							"=IF(D130=1,""true"",""false"")"									
+128		Legacy line spacing	0	"=""[0,1] ""&IF(D128=1,""OO 1.1 "",""Harfbuzz "")&""Spacing active."""							"=IF(D128=1,""true"",""false"")"									
+129		Legacy wrapping	0	"=""[0,1] ""&IF(D129=1,""OO 1.1 "",""Harfbuzz "")&""Wrap active."""							"=IF(D129=1,""true"",""false"")"									
+130		Legacy Positioning	0	"=""[0,1] ""&IF(D130=1,""OO 1.1 "",""Harfbuzz "")&""Pos active."""							"=IF(D130=1,""true"",""false"")"									
 131		Legacy Print Metrics	0	"=""[0,1] ""&IF(D131=1,""Legacy "",""Common "")&""Print active."""							"=IF(D131=1,""true"",""false"")"									
 132		Printer Independent Layout	high-resolution	?	Orphan keep rows @ bot						2	Lines								
 133		Character Compression	1	?	Widow keep rows @ top						2	Lines	Lines							
