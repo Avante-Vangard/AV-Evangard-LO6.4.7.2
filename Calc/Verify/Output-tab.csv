@@ -1,4 +1,4 @@
-=IF(ISBLANK(Defaults.K2),Defaults.L2,LOOKUP(Defaults.K2,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	"=IF(ISERR(CONCAT(A1:A1002)),""INVALID XML"",""PASSES"")"
+=IF(ISBLANK(Defaults.K2),Defaults.L2,LOOKUP(Defaults.K2,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	"=IF(ISERR(CONCAT(A1:A1012)),""INVALID XML"",""PASSES"")"
 =IF(ISBLANK(Defaults.K3),Defaults.L3,LOOKUP(Defaults.K3,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K4),Defaults.L4,LOOKUP(Defaults.K4,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K5),Defaults.L5,LOOKUP(Defaults.K5,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
@@ -117,6 +117,16 @@
 =IF(ISBLANK(Defaults.K118),Defaults.L118,LOOKUP(Defaults.K118,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K119),Defaults.L119,LOOKUP(Defaults.K119,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K120),Defaults.L120,LOOKUP(Defaults.K120,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K121),Defaults.L121,LOOKUP(Defaults.K121,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K122),Defaults.L122,LOOKUP(Defaults.K122,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K123),Defaults.L123,LOOKUP(Defaults.K123,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K124),Defaults.L124,LOOKUP(Defaults.K124,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K125),Defaults.L125,LOOKUP(Defaults.K125,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K126),Defaults.L126,LOOKUP(Defaults.K126,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K127),Defaults.L127,LOOKUP(Defaults.K127,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K128),Defaults.L128,LOOKUP(Defaults.K128,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K129),Defaults.L129,LOOKUP(Defaults.K129,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
+=IF(ISBLANK(Defaults.K130),Defaults.L130,LOOKUP(Defaults.K130,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K131),Defaults.L131,LOOKUP(Defaults.K131,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K132),Defaults.L132,LOOKUP(Defaults.K132,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
 =IF(ISBLANK(Defaults.K133),Defaults.L133,LOOKUP(Defaults.K133,'Tag List'.$W$2:$W$1000,'Tag List'.$X$2:$X$1000))	
