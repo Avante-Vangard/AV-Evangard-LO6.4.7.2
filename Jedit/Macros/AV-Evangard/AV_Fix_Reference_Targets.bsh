@@ -1,0 +1,293 @@
+//======
+// AV Fix Reference targets to PSFM
+// ======
+//  This macro educates typewriter quotes to typographer's quotes. This version is for English.
+//  Note that the macro ends with a list of typewriter quotes remaining. These are left because they are ambiguous and need evaluation.
+// === Simplify Quotes
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Genesis (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|GEN $2");
+SearchAndReplace.setBeanShellReplace(false);
+SearchAndReplace.setWholeWord(false);
+SearchAndReplace.setIgnoreCase(false);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Exodus (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|EXO $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Leviticus (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|LEV $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Numbers (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|NUM $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Deuteronomy (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|DEU $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Joshua (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JOS $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Judges (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JDG $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Ruth (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|RUT $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Samuel (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1SA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Samuel (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2SA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Kings (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1KI $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Kings (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2KI $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Chronicles (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1CH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Chronicles (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2CH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Ezra (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|EZR $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Nehemiah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|NEH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Esther (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|EST $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Job (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JOB $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Psalms (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PSA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Psalm (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PSA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Exodus (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PRO $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Ecclesiastes (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ECC $2");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Song of Solomon (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|SNG $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Song of Songs (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|SNG $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Isaiah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ISA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Jeremiah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JER $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Lamentations (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|LAM $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Ezekiel (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|EZK $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Daniel (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|DAN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Hosea (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|HOS $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Amos (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|AMO $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Obadiah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|OBA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Jonah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JON $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Micah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|MIC $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Nahum (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PSA $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Habakkuk (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|HAB $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Zephaniah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ZEP $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Haggai (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|HAG $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Zechariah (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ZEC $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Malachi (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|MAL $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Matthew (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|MAT $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Mark (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|MRK $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Luke (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|LUK $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}John (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JHN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Acts (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ACT $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Romans (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|ROM $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Corinthians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1CO $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Corinthians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2CO $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Galatians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|GAL $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Ephesians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|EPH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Philippians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PHP $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Colossians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|COL $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Thessalonians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1TH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Thessalonians (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2TH $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Timothy (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1TI $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Timothy (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2TI $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Titus (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|TIT $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Philemon (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|PHM $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Hebrews (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|HEB $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}James (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JAS $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I Peter (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1PE $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II Peter (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2PE $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}I John (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1JN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II John (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1JN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}II John (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|2JN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}III John (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|3JN $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Jude (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|JUD $2");
+SearchAndReplace.replaceAll(view);
+//---
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\| {0,2}Revelation (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|REV $2");
+SearchAndReplace.replaceAll(view);
+//---
+
+//=== Display what's left
+SearchAndReplace.setSearchString("(\\\\xt [^|]{1,30})\\|[^\\\\]{3,14} (\\d{1,3}:\\d{1,3}\\\\xt\\*)");
+SearchAndReplace.setReplaceString("$1\\|1CO $2");
+SearchAndReplace.setReverseSearch(false);
+SearchAndReplace.setWholeWord(false);
+SearchAndReplace.setIgnoreCase(false);
+SearchAndReplace.setRegexp(true);
+SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
+SearchAndReplace.hyperSearch(view,true);
+

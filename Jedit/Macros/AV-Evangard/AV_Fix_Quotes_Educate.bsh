@@ -88,11 +88,11 @@ SearchAndReplace.setReplaceString("$1”");
 SearchAndReplace.replaceAll(view);
 //---
 //=== Nested Leading quotes. 
-SearchAndReplace.setSearchString("(\\u0027\\u201C)");
+SearchAndReplace.setSearchString("\\u0027(\\u201C)");
 SearchAndReplace.setReplaceString("$‘1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0022\\u2018)");
+SearchAndReplace.setSearchString("\\u0022(\\u2018)");
 SearchAndReplace.setReplaceString("“$1");
 SearchAndReplace.replaceAll(view);
 //---
@@ -100,28 +100,79 @@ SearchAndReplace.setSearchString("(\\u0027\\u201C)");
 SearchAndReplace.setReplaceString("$‘1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0022\\u2018)");
+SearchAndReplace.setSearchString("\\u0022(\\u2018)");
 SearchAndReplace.setReplaceString("“$1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0027\\u201C)");
+SearchAndReplace.setSearchString("\\u0027(\\u201C)");
 SearchAndReplace.setReplaceString("$‘1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0022\\u2018)");
+SearchAndReplace.setSearchString("\\u0022(\\u2018)");
 SearchAndReplace.setReplaceString("“$1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0027\\u201C)");
+SearchAndReplace.setSearchString("\\u0027(\\u201C)");
 SearchAndReplace.setReplaceString("$‘1");
 SearchAndReplace.replaceAll(view);
 //---
-SearchAndReplace.setSearchString("(\\u0022\\u2018)");
+SearchAndReplace.setSearchString("\\u0022(\\u2018)");
 SearchAndReplace.setReplaceString("“$1");
 SearchAndReplace.replaceAll(view);
 //---
+//=== undo educated quotes in remarks
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u2018-\\u201b\\u2039\\u203a]");
+SearchAndReplace.setReplaceString("$1\u0027");
+SearchAndReplace.replaceAll(view);
+//--- now double quotes
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+SearchAndReplace.setSearchString("^(\\\\rem [^\\n]{0,1000})[\\u201c-\\u201f\\u2033\\u2036]");
+SearchAndReplace.setReplaceString("$1\"");
+SearchAndReplace.replaceAll(view);
+
 //=== Display what's left
-SearchAndReplace.setSearchString("(\\\"|\\\')");
+SearchAndReplace.setSearchString("(\\u0022|\\u0027)");
 SearchAndReplace.setAutoWrapAround(false);
 SearchAndReplace.setReverseSearch(false);
 SearchAndReplace.setWholeWord(false);
@@ -129,3 +180,35 @@ SearchAndReplace.setIgnoreCase(false);
 SearchAndReplace.setRegexp(true);
 SearchAndReplace.setSearchFileSet(new CurrentBufferSet());
 SearchAndReplace.hyperSearch(view,true);
+
+//===== index of quote mark - unicode
+// Latin:
+// - \u0022 : " straight double quote 
+// - \\u0027 : ' straight single quote. aka apostrophe
+// - \\u0060 : ` grave accent. 
+// - \\u00b4 : ´ acute accent.
+// - \\u00ab : « left guillemet, aka left double angle quote or left double chevron.
+// - \\u00bb : » right guillemet, aka left double angle quote or right double chevron.
+// Phonetic: ("Timing modifier") These are plain characters 
+
+// General Punctuation:
+// - \\u2018 : ‘ left single quote
+// - \\u2019 : ’ right single quote
+// - \\u201a : ‚ left low single quote.
+// - \\u201b : ‛ reverse right single quote
+// - \\u201c : “ left double quote.
+// - \\u201d : ” right double quote.
+// - \\u201e : „ left low double quote.
+// - \\u201f : ‟ reversed right double quote.
+// - 
+// - \\u2032 : ′ prime.
+// - \\u2033 : ″ double prime.
+// - \\u2034 : ‴ triple prime.
+// - \\u2035 : ‵ reverse prime.
+// - \\u2036 : ‶ reversed double prime.
+// - \\u2037 : ‷ reversed triple prime.
+// - \\u2039 : ‹ left guillemet. aka left angle quote or left chevron.
+// - \\u203a : › right guillemet. aka right angle quote or right chevron.
+
+
+// - \\u2057 : ⁗ quadruple prime.

@@ -1,70 +1,231 @@
 /*
- * USFM_Insert_CTags.bsh - a BeanShell macro script for
- * jEdit text editor - inserts USFM character tags
- * around selected text
- * Copyright 2017 Michael Hart 
- * 95% (or more) directly from Insert_tags.bsh 
- * Copyright (C) 2001-2010 
- * John Gellene <jgellene@nyc.rr.com>, Vadim Voituk <vadim@voituk.com> 
- * http://community.jedit.org
- *
- * This program is free software; you can redistribute it and/or
- * modify it under the terms of the GNU General Public License
- * as published by the Free Software Foundation; either version 2
- * of the License, or any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with the jEdit program; if not, write to the Free Software
- * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
- *
- * $Id: Insert_Tag.bsh 21353 2012-03-14 09:46:51Z jojaba_67 $
- */
+* AV_Insert_CTags.bsh
+* - a BeanShell macro script for jEdit text editor including a plain
+ - Typographer's Toolkit:
+* - inserts p.sfm word tags around selected text (\ then lower case letter and num keys)
+* - inserts typographer's quotes (number, shift-num, puncuation keys)
+* - inserts typographer's braces (bracing and slash keys)
+* - inserts typographer's spaces (capital letter keys)
+* - keymap can be seen at docs.google.com/spreadsheets/d/1Q8uPLzs-zCOuusRZ0Ae9XON8cXiFRpz6E090eRHkEdY
+* Copyright 2017-2026 Michael Hart <avante.vangard@gmail.com>
+* ---------------------------------------------------------------------------
+* 95% (or more) of this  code came directly from Insert_tags.bsh 
+*                Copyright (C) 2001-2010  * John Gellene , Vadim Voituk 
+*               https://community.jedit.org
+*
+* This program is free software; you can redistribute it and/or
+* modify it under the terms of the GNU General Public License
+* as published by the Free Software Foundation; either version 2
+* of the License, or any later version.
+*
+* This program is distributed in the hope that it will be useful,
+* but WITHOUT ANY WARRANTY; without even the implied warranty of
+* MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+* See the GNU General Public License for more details.
+*
+* You should have received a copy of the GNU General Public License
+* along with the jEdit program; if not, write to the Free Software
+* Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+*
+* $Id: AV_Insert_CTags.bsh
+*/
 // Localization
 final static String EnterNameTagLabel = jEdit.getProperty("macro.rs.InsertTag.EnterNameTag.label", "Enter name of tag:");
 final static String NotEditableMessage = jEdit.getProperty("macro.rs.general.ErrorNotEditableDialog.message", "Buffer is not editable"); 
 
 // Process 
 Map tagsTemplate = new TreeMap() {{
-	 put("-",		"‒");
- 	 put("--", 	"–");
-	 put("---",	"—");
- 	 put("|", 	"“");
- 	 put("`", 	"‘");
- 	 put("[", 	"[");
- 	 put("[{", 	"[{");
- 	 put("[(", 	"[(");
- 	 put("{", 	"{");
- 	 put("<", 	"<");
- 	 put("(", 	"(");
- 	 put("ef", 	"\\ef + \\fr \\ft ");
- 	 put("f", 	"\\f + \\fr \\fk \\ft ");
- 	 put("fe", 	"\\fe + \ft ");
- 	 put("fp", 	"\\fp - \ft ");
- 	 put("fig", 	"\\fig (##pt x ##pt) |");
- 	 put("x",	"\\x + \\xo \\xt "); 
- 	 put("xdc",	"\\xdc + \\xo \\xt ");
- 	 put("xnt",	"\\xnt + \\xo \\xt ");
- 	 put("xot",	"\\xot + \\xo \\xt ");
+	/* Single Symbol Shifted PRE*/	
+	put("~",  "`"); // U+0060 cnd NW hats
+	put("!",  "⸂"); // U+2E02 cnd shell hats
+	put("@",  "◜"); // U+25DC cnd round hats
+	put("#",  "⸢"); // U+2E22 cnd square hats
+	put("$",  "ʿ"); // U+02BF cnd bowl hats
+	put("%",  "⸍"); // U+2E0D slash hats
+	put("^",  "˂"); // U+02C2 cnd angle hats
+	put("&",  "﹠"); // U+FE60 small ampersand
+	put("*",  "∗"); // U+2217 math star
+	put("(",  "❪"); // U+276A cnd round belts
+	put(")",  "⁌"); // U+204C double bowl belts
+	put("_",  "⸏"); // U+2E0F paragraphos
+	put("+",  "⁜"); // U+205C dotted cross
+	put("{",  "⦃"); // U+2983 double curly brackets
+	put("}",  "⟬"); // U+27EC double shell brackets
+	put("|",  "⏽"); // U+23FD cnd bar
+	put(":",  "⁝"); // U+205D 3 dot punctuation
+	put("\"",  "“"); // U+201C double curly hats
+	put("<",  "«"); // U+00AB double angle belts
+	put(">",  "‹"); // U+2039 angle belts
+	put("?",  "¿"); // U+00BF curly dots
+	/* Single Symbol PRE */	
+	put("`",  "ˎ"); // U+02CE cnd NW boots
+	put("1",  "𛲒"); // U+BC92 cnd shell boots
+	put("2",  "◟"); // U+25DF cnd round boots
+	put("3",  "⸤"); // U+2E24 cnd square boots
+	put("4",  "꜀"); // U+A700 cnd double bars
+	put("5",  "⸜"); // U+2E1C slash boots
+	put("6",  "˱"); // U+02F1 angle boots
+	put("7",  "©"); // U+00A9 copyright
+	put("8",  "·"); // U+00B7 middle dot
+	put("9",  "¶"); // U+00B6 square pilcrows
+	put("0",  "❡"); // U+2761 curly pilcrows
+	put("-",  "‑"); // U+2011 no-break dash
+	put("=",  "☩"); // U+2629 cross
+	put("[",  "﹝"); // U+FE5D shell belts
+	put("]",  "❲"); // U+2772 shell brackets
+	put("\\",  "∖"); // U+2216 math backslash
+	put(";",  "∷"); // U+2237 double colon
+	put("\'",  "‘"); // U+2018 curly hats
+	put(",",  "🙶"); // U+F676 doublecurly belts
+	put(".",  "⸲"); // U+2E32 curly belts
+	put("/",  "᜵"); // U+1735 condensed slash
+	/* Single Shifted Alpha PRE*/	
+	put("A",  "\u2E0E"); //  coronis mark <⸎> 
+	put("B",  "\u00A0"); //  no-break space < >
+	put("C",  "\u2E3F"); //  capitulum <⸿>
+	put("D",  "\u2005"); //  mid space < >
+	put("E",  "\u0083"); //  begin no-break <>
+	put("F",  "\u2007"); //  figure space < >
+	put("G",  "\u3000"); //  ideographic space <　>
+	put("H",  "\u200A"); //  hair space < >
+	put("I",  "\u2063"); //  invisible comma <⁣>
+	put("J",  "\u200D"); //  ligature joiner <‍>
+	put("K",  "\u2004"); //  thick space < >
+	put("L",  "\u2E19"); //  palm branch <⸙>
+	put("M",  "\u2003"); //  mutton space < >
+	put("N",  "\u2002"); //  nut space < >
+	put("O",  "\u0082"); //  end no-break <>
+	put("P",  "\u2008"); //  punctuation space < >
+	put("Q",  "\u2000"); //  en quad space < >
+	put("R",  "\u202F"); //  narrow no-break space < >
+	put("S",  "\u00A7"); //  section sign <§>
+	put("T",  "\u2009"); //  thin space < >
+	put("U",  "\u200C"); //  ligature unjoiner <‌>
+	put("V",  "\u2E4F"); //  verse divider <⹏>
+	put("W",  "\u2060"); //  word joiner <⁠>
+	put("X",  "\u203B"); //  reference mark <※>
+	put("Y",  "\u00AD"); //  invisible hyphen <­>
+	put("Z",  "\u200B"); //  ZW Space <​>
+	/* 2-Character PRE*/	
+	put("~~",  "〝"); // U+301D cnd NW hats
+	put("!!",  "¡"); // U+A1 icepicks
+	put("((",  "⸨"); // U+2E28 double round brackets
+	put("+_",  "⸐"); // U+2E10 forked paragraphos
+	put("_+",  "⸑"); // U+2E11 forked paragraphos
+	put("||",  "‖"); // U+2016 cnd double bars
+	put("[[",  "⟦"); // U+27E6 double square brackets
+	put("``",  "𖺘"); // U+16E98 NW boots
+	/* Dashes only insert before */
+	put("--", 	"–"); // en dash U+2013
+	put("---",	"—"); // em dash U+2014
+	/* legacy tags from BL-SFM or USFM to inquote... not p.sfm */ 
+	put("[{", 	"[{"); // insert scripture from reference inside brackets.
+	put("[(", 	"[("); // insert variable from reference inside brackets.
+	/* not sure why ∖cl is needed... it should be ok with typed tags? */
+	put("cl", 	"\\cl");
+	/* complex (figs ﹠ feet) tags */
+	put("ef", 	"\\ef + \\fr \\ft "); //extended footnote
+	put("fdc", 	"\\fdc + \\fr \\fk \\ft "); //footnote pointing into deuterocanon.
+	put("f", 	"\\f + \\fr \\fk \\ft "); // footnote
+	put("fe", 	"\\fe + \ft "); // endnote
+	put("fp", 	"\\fp - \ft "); // new paragraph in a footnote
+	put("fig", 	"\\fig (##pt x ##pt) |"); //figure
+	put("table",	"\\rem Table |name=\""); //table header
+	put("x",	"\\x + \\xo \\xt "); //cross referene
+	put("xdc",	"\\xdc + \\xo \\xt "); // reference into Deuterocanon
+	put("xnt",	"\\xnt + \\xo \\xt "); // reference into New Testament
+	put("xot",	"\\xot + \\xo \\xt "); // reference into Old Testament
 }};
 Map tagsTemplatePost = new TreeMap() {{
-	 put("-",		"");
- 	 put("--", 	"");
-	 put("---",	"");
- 	 put("|", 	"”");
- 	 put("`", 	"’");
- 	 put("[", 	"]");
- 	 put("{", 	"}");
- 	 put("[{", 	")]");
- 	 put("[(", 	")]");
- 	 put("<", 	">");
- 	 put("(", 	")");
- 	 put("fig", 	"|col|||caption text|\\fig*");
- 	 put("ndx", 	"|Index Entry\\ndx*");
+	/* Single Symbol Shifted POST */	
+	put("~",  "´"); // U+00B4 cnd NW hats
+	put("!",  "⸃"); // U+2E03 cnd shell hats
+	put("@",  "◝"); // U+25DD cnd round hats
+	put("#",  "⸣"); // U+2E23 cnd square hats
+	put("$",  "ʾ"); // U+02BE cnd bowl hats
+	put("%",  "⸌"); // U+2E0C slash hats
+	put("^",  "˃"); // U+02C3 cnd angle hats
+	put("&",  "");
+	put("*",  "");
+	put("(",  "❫"); // U+276B cnd round belts
+	put(")",  "⁍"); // U+204D double bowl belts
+	put("_",  "");
+	put("+",  "");
+	put("{",  "⦄"); // U+2984 double curly brackets
+	put("}",  "⟭"); // U+27ED double shell brackets
+	put("|",  "");
+	put(":",  "");
+	put("\"",  "”"); // U+201D double curly hats
+	put("<",  "»"); // U+00BB double angle belts
+	put(">",  "›"); // U+203A angle belts
+	put("?",  "?"); // U+003F curly dots
+	/* Single Symbol POST */	
+	put("`",  "ˏ"); // U+02CF cnd NW boots
+	put("1",  "𛲐"); // U+BC90 cnd shell boots
+	put("2",  "◞"); // U+25DE cnd round boots
+	put("3",  "⸥"); // U+2E25 cnd square boots
+	put("4",  "꜆"); // U+A706 cnd double bars
+	put("5",  "⸝"); // U+2E1D slash boots
+	put("6",  "˲"); // U+02F2 angle boots
+	put("7",  "");
+	put("8",  "");
+	put("9",  "⹍"); // U+2E4D square pilcrows
+	put("0",  "⁋"); // U+204B curly pilcrows
+	put("-",  "");
+	put("=",  "");
+	put("[",  "﹞"); // U+FE5E shell belts
+	put("]",  "❳"); // U+2773 shell brackets
+	put("\\",  "");
+	put(";",  "");
+	put("\'",  "’"); // U+2019 curly hats
+	put(",",  "🙷"); // U+F677 doublecurly belts
+	put(".",  "⸴"); // U+2E34 curly belts
+	put("/",  "⧵"); // U+29F5 cnd slash
+	/* Single Shifted Alpha POST */	
+	put("A",  "");
+	put("B",  "");
+	put("C",  "");
+	put("D",  "");
+	put("E",  "");
+	put("F",  "");
+	put("G",  "");
+	put("H",  "");
+	put("I",  "");
+	put("J",  "");
+	put("K",  "");
+	put("L",  "");
+	put("M",  "");
+	put("N",  "");
+	put("O",  "");
+	put("P",  "");
+	put("Q",  "");
+	put("R",  "");
+	put("S",  "");
+	put("T",  "");
+	put("U",  "");
+	put("V",  "");
+	put("W",  "");
+	put("X",  "");
+	put("Y",  "");
+	put("Z",  "");
+	/* 2-Character POST*/	
+	put("~~",  "〞"); // U+301E cnd NW hats
+	put("!!",  "!"); // U+0021 icepicks
+	put("((",  "⸩"); // U+2E29 double round brackets
+	put("+_",  "");
+	put("_+",  "");
+	put("||",  "");
+	put("[[",  "⟧"); // U+27E7 double square brackets
+	put("``",  "〟"); // U+301F NW boots
+	/* Multiple Character POST*/
+	put("--", 	"");
+	put("---",	"");
+	put("[{", 	"}]");
+	put("[(", 	")]");
+	put("cl", 	"");
+	put("fig", 	"|col|||caption text|\\fig*");
+	put("ndx", 	"|Index Entry\\ndx*");
+	put("table", 	"\"|cols=\"2\"|");
 }};
 
 
@@ -121,12 +282,12 @@ else
 	Macro index data (in DocBook format)
 
 <listitem>
-    <para><filename>USFM_Insert_CTags.bsh</filename></para>
+    <para><filename>AV_Insert_Character_Tags.bsh</filename></para>
     <abstract><para>
-        Insert USFM character tags supplied in an input dialog.
+        Insert PSFM character tags supplied in an input dialog.
     </para></abstract>
 </listitem>
 
 */
 
-// end USFM_Insert_CTags.bsh
+// end PSFM_Insert_Character_Tags.bsh
