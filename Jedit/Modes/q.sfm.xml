@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE MODE SYSTEM "xmode.dtd">
-<!-- p.sfm.xml version 2026.01 -->
+<!-- p.sfm-OCR.xml version 2026.01 -->
 <!-- Catalog Entry 
-<MODE NAME="Plain+Simple (p.sfm)" FILE="p.sfm.xml" FILE_NAME_GLOB="*.p.sfm" /> 
+<MODE NAME="Quick.sfm (AV)" FILE="q.sfm.xml" FILE_NAME_GLOB="*.q.sfm" />
 
 Jedit Token	USFM Tag
 COMMENT1	cat, cat#, ndx-ndx*, toc, toc#, toca, toca#
 COMMENT2	h, h#, b, b#, ib, ib#,
-COMMENT3	id, ide, sts, periph, rem, ts
+COMMENT3	rem
 COMMENT4	ef-ef*, ex-ex*, f-f*, fc-fc*, fdc-fdc*, fe-fe*
 DIGIT
-FUNCTION	x-x*, xdc-xdc*, xnt-xnt*, xot-xot*
-INVALID		[^ ]+
+FUNCTION	fig-fig*, id, ide, jmp-jmp*, pb, sts, ts, periph, jmp-jmp*, x-x*, xdc-xdc*, xnt-xnt*, xot-xot*, xt-xt*,
+INVALID	<->, &-;, ', ",
 KEYWORD1	cd, cl, cls, fp, ie, iex, ili, ili#, im, im#, imi, imq, io, io#, ip, ip#, ipi, ipq, ipr, iq, iq#, k, K#, li, li#, lim, lim#, lit, m, mi, mr, nb, p, p#, ph, ph#, pi, pi#, pm, pmc, pmo, pmr, po, pr, ps, psi, q, q#, qc, qd, qm, qm#, qr,  tr, tr#
 KEYWORD2	c, cp, v, tc, tc#, tcc, tcc#, tcr, tcr#, th, th#, thc, thc#, thr, thr#
 KEYWORD3	imt, imt#, imte, imte#, ms, ms#, mt, mt#, mte, mte#,
 KEYWORD4	d, iot, is, is#, lf, lh, qa, r, s, s#, sp, sr, xtSee, xtSeeAlso
 LABEL		wj-wj*, nd-nd*
-LITERAL1		fp-fp*, fs-fs*, ft-ft*, no-no*, sc-sc*, va-va*, vp-vp*, xt-xt*
-LITERAL2		add-add*, bk-bk*, dc-dc*, fq-fq*, fqa-fqa*, fv-fv*, ior-ior*, iqt-iqt*, it-it*, iti-iti*, lik-lik*, nl-nl* ord-ord*, pn-pn*, qac-qac*, qs-qs*, qt-qt*, rq-rq*, sls-sls*, tl-tl*, sls-sls*, va-va*, xq-xq*, xt-xt*
-LITERAL3		ca-ca*, bd-bd*, fk-fk*, fl-fl*, fm-fm*, fr-fr*, ibd-ibd*, isb-isb*, k-k*, pro-pro*, w-w*, wg-wg*, wh-wh*, wr-wr*, xk-xk*
-LITERAL4		bdit-bdit*, em-em*, iem-iem*, n-n*, nh-nh* , sig-sig*
-MARKUP		erq, esb, esbe, fig-fig*, jmp-jmp*, xt-xt*, pb, 
-OPERATOR
+LITERAL1	fp-fp*, fs-fs*, ft-ft*, no-no*, sc-sc*, va-va*, vp-vp*, xt-xt*
+LITERAL2	add-add*, bk-bk*, dc-dc*, fq-fq*, fqa-fqa*, fv-fv*, ior-ior*, iqt-iqt*, it-it*, iti-iti*, lik-lik*, nl-nl* ord-ord*, pn-pn*, qac-qac*, qs-qs*, qt-qt*, rq-rq*, sls-sls*, tl-tl*, sls-sls*, va-va*, xq-xq*, xt-xt*
+LITERAL3	ca-ca*, bd-bd*, fk-fk*, fl-fl*, fm-fm*, fr-fr*, ibd-ibd*, isb-isb*, k-k*, pro-pro*, w-w*, wg-wg*, wh-wh*, wr-wr*, xk-xk*
+LITERAL4	bdit-bdit*, em-em*, iem-iem*, n-n*, nh-nh* , sig-sig*
+MARKUP	erq, esb, esbe,
+OPERATOR	[punct:]
 -->
 
 <MODE>
@@ -33,12 +33,19 @@ OPERATOR
 		<PROPERTY NAME="wrap" VALUE="soft" />
 	</PROPS>
 
-	<RULES IGNORE_CASE="FALSE" HIGHLIGHT_DIGITS="TRUE">
+	<RULES IGNORE_CASE="FALSE" HIGHLIGHT_DIGITS="FALSE">
+		
+		<SEQ_REGEXP TYPE="INVALID">(\'$|\'\s|\s\'|\")</SEQ_REGEXP>
+		<SEQ_REGEXP TYPE="OPERATOR">[\p{P}&amp;&amp;[^\\]]</SEQ_REGEXP>
+		<SPAN TYPE="INVALID" NO_LINE_BREAK="TRUE">
+			<BEGIN>&lt;</BEGIN>
+			<END>&gt;</END>
+		</SPAN>
 		
 		<SPAN TYPE="INVALID" NO_LINE_BREAK="TRUE">
-			<BEGIN>&lt;</BEGIN> <END>&gt;</END> </SPAN>
-		<SPAN TYPE="INVALID" NO_LINE_BREAK="TRUE">
-			<BEGIN>&amp;</BEGIN> <END>;</END> </SPAN>
+			<BEGIN>&amp;</BEGIN>
+			<END>;</END>
+		</SPAN>
 
  		<EOL_SPAN TYPE="COMMENT1">\cat </EOL_SPAN>
 		<EOL_SPAN TYPE="COMMENT1">\toc </EOL_SPAN>
@@ -69,12 +76,7 @@ OPERATOR
 		<EOL_SPAN_REGEXP TYPE="COMMENT2">\\ib[0-9]{0,1} *$</EOL_SPAN_REGEXP>
 		<EOL_SPAN_REGEXP TYPE="COMMENT2">\\h[0-9]{0,1}.*$</EOL_SPAN_REGEXP>
 		
-		<EOL_SPAN TYPE="COMMENT3">\id </EOL_SPAN>
-		<EOL_SPAN TYPE="COMMENT3">\ide</EOL_SPAN>
-		<EOL_SPAN TYPE="COMMENT3">\periph</EOL_SPAN>
 		<EOL_SPAN TYPE="COMMENT3">\rem</EOL_SPAN>
-		<EOL_SPAN TYPE="COMMENT3">\sts</EOL_SPAN>
-		<EOL_SPAN TYPE="COMMENT3">\ts</EOL_SPAN>
 		
 		<SEQ_REGEXP HASH_CHAR="\ex " TYPE="COMMENT4">.+?\\ex\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ef " TYPE="COMMENT4">.+?\\ef\*</SEQ_REGEXP>
@@ -83,10 +85,19 @@ OPERATOR
 		<SEQ_REGEXP HASH_CHAR="\fdc " TYPE="COMMENT4">.+?\\fdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fe " TYPE="COMMENT4">.+?\\fe\*</SEQ_REGEXP>
 		
+		<SEQ_REGEXP HASH_CHAR="\fig" TYPE="FUNCTION">.+?\\fig\*</SEQ_REGEXP>
+		<EOL_SPAN TYPE="FUNCTION">\id </EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\ide</EOL_SPAN>
+		<SEQ_REGEXP HASH_CHAR="\jmp" TYPE="FUNCTION">.+?\\jmp\*</SEQ_REGEXP>
+		<EOL_SPAN TYPE="FUNCTION">\pb</EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\periph</EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\sts</EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\ts</EOL_SPAN>
 		<SEQ_REGEXP HASH_CHAR="\x " TYPE="FUNCTION">.+?\\x\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xdc " TYPE="FUNCTION">.+?\\xdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xnt " TYPE="FUNCTION">.+?\\xnt\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xot " TYPE="FUNCTION">.+?\\xot\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\xt" TYPE="FUNCTION">.+?\\xt{0,1}\*</SEQ_REGEXP>
 		
 		<EOL_SPAN TYPE="KEYWORD2">\c </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD2">\cp </EOL_SPAN>
@@ -245,20 +256,10 @@ OPERATOR
 		<SEQ_REGEXP HASH_CHAR="\nh" TYPE="LITERAL4">.+?\\nh\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\sig " TYPE="LITERAL4">.+?\\sig\*</SEQ_REGEXP>
 
-		<!--
-		<EOL_SPAN TYPE="OPERATOR">\q </EOL_SPAN>
-		<EOL_SPAN TYPE="LABEL">\q1</EOL_SPAN>
-		<EOL_SPAN TYPE="MARKUP">\q2</EOL_SPAN>
-		-->
-
 
 		<EOL_SPAN TYPE="MARKUP">\erq</EOL_SPAN>
 		<EOL_SPAN TYPE="MARKUP">\esb</EOL_SPAN>
 		<EOL_SPAN TYPE="MARKUP">\esbe</EOL_SPAN>
-		<SEQ_REGEXP HASH_CHAR="\fig" TYPE="MARKUP">.+?\\fig\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\jmp" TYPE="MARKUP">.+?\\jmp\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\xt" TYPE="MARKUP">.+?\\xt\*</SEQ_REGEXP>
-		<EOL_SPAN TYPE="MARKUP">\pb</EOL_SPAN>
 
 		<EOL_SPAN_REGEXP TYPE="INVALID">\\i{0,1}b[0-9]{0,1} {0,1}.{1,}$</EOL_SPAN_REGEXP>
 		<EOL_SPAN_REGEXP TYPE="INVALID">\n[^\\].+</EOL_SPAN_REGEXP>
@@ -510,7 +511,7 @@ OPERATOR
 			<KEYWORD2>\thr8</KEYWORD2>
 			<KEYWORD2>\thr9</KEYWORD2>
 			<KEYWORD2>\thr</KEYWORD2>
-			<KEYWORD2>\th</KEYWORD2>
+
 			</KEYWORDS>
 <!--		<EOL_SPAN_REGEXP TYPE="INVALID">^[^\\].+$</EOL_SPAN_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\" TYPE="INVALID">([^ ]+) .+?\\$1\*</SEQ_REGEXP>
