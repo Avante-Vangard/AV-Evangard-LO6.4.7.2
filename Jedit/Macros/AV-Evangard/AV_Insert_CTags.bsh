@@ -125,10 +125,12 @@ Map tagsTemplate = new TreeMap() {{
 	put("cl", 	"\\cl");
 	/* complex (figs ﹠ feet) tags */
 	put("ef", 	"\\ef + \\fr \\ft "); //extended footnote
+	put("ex", 	"\\ex + \\xo \\xq \\xt "); //extended footnote
 	put("fdc", 	"\\fdc + \\fr \\fk \\ft "); //footnote pointing into deuterocanon.
 	put("f", 	"\\f + \\fr \\fk \\ft "); // footnote
-	put("fe", 	"\\fe + \ft "); // endnote
-	put("fp", 	"\\fp - \ft "); // new paragraph in a footnote
+	put("fe", 	"\\fe + \\ft "); // endnote
+	put("fp", 	"\\fp - \\ft "); // new paragraph in a footnote
+	put("fs", 	"\\fs - \\fl "); // new paragraph in a footnote
 	put("fig", 	"\\fig (##pt x ##pt) |"); //figure
 	put("table",	"\\rem Table |name=\""); //table header
 	put("x",	"\\x + \\xo \\xt "); //cross referene

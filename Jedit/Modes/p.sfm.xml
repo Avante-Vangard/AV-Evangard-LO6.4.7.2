@@ -7,21 +7,21 @@
 Jedit Token	USFM Tag
 COMMENT1	cat, cat#, ndx-ndx*, toc, toc#, toca, toca#
 COMMENT2	h, h#, b, b#, ib, ib#,
-COMMENT3	id, ide, sts, periph, rem, ts
-COMMENT4	ef-ef*, ex-ex*, f-f*, fc-fc*, fdc-fdc*, fe-fe*
+COMMENT3	id, ide, sts, periph, rem, ts, usfm
+COMMENT4	ef-ef*, ex-ex*, f-f*, fm-fm*, fp-fp*, fdc-fdc*, fe-fe*
 DIGIT
-FUNCTION	x-x*, xdc-xdc*, xnt-xnt*, xot-xot*
+FUNCTION	fs-fs*, x-x*, xdc-xdc*, xnt-xnt*, xot-xot*
 INVALID		[^ ]+
-KEYWORD1	cd, cl, cls, fp, ie, iex, ili, ili#, im, im#, imi, imq, io, io#, ip, ip#, ipi, ipq, ipr, iq, iq#, k, K#, li, li#, lim, lim#, lit, m, mi, mr, nb, p, p#, ph, ph#, pi, pi#, pm, pmc, pmo, pmr, po, pr, ps, psi, q, q#, qc, qd, qm, qm#, qr,  tr, tr#
+KEYWORD1	cd, cl, cls, fp, ie, iex, ili, ili#, im, im#, imi#, imq, io, io#, ip#, ipi, ipq, ipr, iq, iq#, k, K#, li, li#, lim, lim#, lit, m, mi, mr, nb, p, p#, ph, ph#, pi, pi#, pm, pmc, pmo, pmr, po, pr, ps, psi, q, q#, qc, qd, qm, qm#, qr,  tr, tr#
 KEYWORD2	c, cp, v, tc, tc#, tcc, tcc#, tcr, tcr#, th, th#, thc, thc#, thr, thr#
 KEYWORD3	imt, imt#, imte, imte#, ms, ms#, mt, mt#, mte, mte#,
 KEYWORD4	d, iot, is, is#, lf, lh, qa, r, s, s#, sp, sr, xtSee, xtSeeAlso
 LABEL		wj-wj*, nd-nd*
-LITERAL1		fp-fp*, fs-fs*, ft-ft*, no-no*, sc-sc*, va-va*, vp-vp*, xt-xt*
+LITERAL1		ft-ft*, no-no*, sc-sc*, va-va*, vp-vp*, xt-xt*
 LITERAL2		add-add*, bk-bk*, dc-dc*, fq-fq*, fqa-fqa*, fv-fv*, ior-ior*, iqt-iqt*, it-it*, iti-iti*, lik-lik*, nl-nl* ord-ord*, pn-pn*, qac-qac*, qs-qs*, qt-qt*, rq-rq*, sls-sls*, tl-tl*, sls-sls*, va-va*, xq-xq*, xt-xt*
 LITERAL3		ca-ca*, bd-bd*, fk-fk*, fl-fl*, fm-fm*, fr-fr*, ibd-ibd*, isb-isb*, k-k*, pro-pro*, w-w*, wg-wg*, wh-wh*, wr-wr*, xk-xk*
 LITERAL4		bdit-bdit*, em-em*, iem-iem*, n-n*, nh-nh* , sig-sig*
-MARKUP		erq, esb, esbe, fig-fig*, jmp-jmp*, xt-xt*, pb, 
+MARKUP		erq, esb, esbe, fig-fig*, jmp-jmp*, xt-xt*, pb, col, span, ie, [{-}]
 OPERATOR
 -->
 
@@ -75,14 +75,17 @@ OPERATOR
 		<EOL_SPAN TYPE="COMMENT3">\rem</EOL_SPAN>
 		<EOL_SPAN TYPE="COMMENT3">\sts</EOL_SPAN>
 		<EOL_SPAN TYPE="COMMENT3">\ts</EOL_SPAN>
+		<EOL_SPAN TYPE="COMMENT3">\usfm</EOL_SPAN>
 		
 		<SEQ_REGEXP HASH_CHAR="\ex " TYPE="COMMENT4">.+?\\ex\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ef " TYPE="COMMENT4">.+?\\ef\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\f " TYPE="COMMENT4">.+?\\f\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\fc " TYPE="COMMENT4">.+?\\fc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fdc " TYPE="COMMENT4">.+?\\fdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fe " TYPE="COMMENT4">.+?\\fe\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\fm " TYPE="COMMENT4">.+?\\fm\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\fp " TYPE="COMMENT4">.+?\\fp\*</SEQ_REGEXP>
 		
+		<SEQ_REGEXP HASH_CHAR="\fs" TYPE="FUNCTION">.+?\\fs\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\x " TYPE="FUNCTION">.+?\\x\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xdc " TYPE="FUNCTION">.+?\\xdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xnt " TYPE="FUNCTION">.+?\\xnt\*</SEQ_REGEXP>
@@ -125,6 +128,17 @@ OPERATOR
 		<EOL_SPAN TYPE="KEYWORD3">\ms7 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\ms8 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\ms9 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse0 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse1 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse2 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse3 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse4 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse5 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse6 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse7 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse8 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse9 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt0 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt1 </EOL_SPAN>
@@ -188,8 +202,6 @@ OPERATOR
 		<SEQ_REGEXP HASH_CHAR="\wj " TYPE="LABEL">.+?\\wj\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\nd" TYPE="LABEL">.+?\\nd\*</SEQ_REGEXP>
 		
-		<SEQ_REGEXP HASH_CHAR="\fp" TYPE="LITERAL1">.+?\\fp\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\fs" TYPE="LITERAL1">.+?\\fs\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ft" TYPE="LITERAL1">.+?\\ft\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ino" TYPE="LITERAL1">.+?\\ino\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\no" TYPE="LITERAL1">.+?\\no\*</SEQ_REGEXP>
@@ -227,7 +239,7 @@ OPERATOR
 		<SEQ_REGEXP HASH_CHAR="\fr" TYPE="LITERAL3">.+?\\fr\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fv" TYPE="LITERAL3">.+?\\fv\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ibd" TYPE="LITERAL3">.+?\\ibd\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\isd" TYPE="LITERAL3">.+?\\isb\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\isb" TYPE="LITERAL3">.+?\\isb\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\k" TYPE="LITERAL3">.+?\\k\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\pro" TYPE="LITERAL3">.+?\\pro\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\w " TYPE="LITERAL3">.+?\\w\*</SEQ_REGEXP>
@@ -252,13 +264,16 @@ OPERATOR
 		-->
 
 
-		<EOL_SPAN TYPE="MARKUP">\erq</EOL_SPAN>
-		<EOL_SPAN TYPE="MARKUP">\esb</EOL_SPAN>
+		<EOL_SPAN TYPE="MARKUP">\erq </EOL_SPAN>
+		<EOL_SPAN TYPE="MARKUP">\esb </EOL_SPAN>
 		<EOL_SPAN TYPE="MARKUP">\esbe</EOL_SPAN>
 		<SEQ_REGEXP HASH_CHAR="\fig" TYPE="MARKUP">.+?\\fig\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\jmp" TYPE="MARKUP">.+?\\jmp\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xt" TYPE="MARKUP">.+?\\xt\*</SEQ_REGEXP>
-		<EOL_SPAN TYPE="MARKUP">\pb</EOL_SPAN>
+ 		<EOL_SPAN TYPE="MARKUP">\pb</EOL_SPAN>
+		<EOL_SPAN TYPE="MARKUP">\col</EOL_SPAN>
+		<EOL_SPAN TYPE="MARKUP">\span</EOL_SPAN>
+		
 
 		<EOL_SPAN_REGEXP TYPE="INVALID">\\i{0,1}b[0-9]{0,1} {0,1}.{1,}$</EOL_SPAN_REGEXP>
 		<EOL_SPAN_REGEXP TYPE="INVALID">\n[^\\].+</EOL_SPAN_REGEXP>
@@ -267,7 +282,6 @@ OPERATOR
 			<KEYWORD1>\cd</KEYWORD1>
 			<KEYWORD1>\cls</KEYWORD1>
 			<KEYWORD1>\fp</KEYWORD1>
-			<KEYWORD1>\ie</KEYWORD1>
 			<KEYWORD1>\iex</KEYWORD1>
 			<KEYWORD1>\ili0</KEYWORD1>
 			<KEYWORD1>\ili1</KEYWORD1>
@@ -291,6 +305,16 @@ OPERATOR
 			<KEYWORD1>\im8</KEYWORD1>
 			<KEYWORD1>\im9</KEYWORD1>
 			<KEYWORD1>\im</KEYWORD1>
+			<KEYWORD1>\imi0</KEYWORD1>
+			<KEYWORD1>\imi1</KEYWORD1>
+			<KEYWORD1>\imi2</KEYWORD1>
+			<KEYWORD1>\imi3</KEYWORD1>
+			<KEYWORD1>\imi4</KEYWORD1>
+			<KEYWORD1>\imi5</KEYWORD1>
+			<KEYWORD1>\imi6</KEYWORD1>
+			<KEYWORD1>\imi7</KEYWORD1>
+			<KEYWORD1>\imi8</KEYWORD1>
+			<KEYWORD1>\imi9</KEYWORD1>
 			<KEYWORD1>\imi</KEYWORD1>
 			<KEYWORD1>\imq</KEYWORD1>
 			<KEYWORD1>\io0</KEYWORD1>
@@ -511,7 +535,8 @@ OPERATOR
 			<KEYWORD2>\thr9</KEYWORD2>
 			<KEYWORD2>\thr</KEYWORD2>
 			<KEYWORD2>\th</KEYWORD2>
-			</KEYWORDS>
+			<KEYWORD4>\ie</KEYWORD4>
+		</KEYWORDS>
 <!--		<EOL_SPAN_REGEXP TYPE="INVALID">^[^\\].+$</EOL_SPAN_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\" TYPE="INVALID">([^ ]+) .+?\\$1\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\" TYPE="INVALID">([^ ]+) </SEQ_REGEXP>

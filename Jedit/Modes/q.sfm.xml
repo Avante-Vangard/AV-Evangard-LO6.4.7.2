@@ -2,7 +2,7 @@
 <!DOCTYPE MODE SYSTEM "xmode.dtd">
 <!-- p.sfm-OCR.xml version 2026.01 -->
 <!-- Catalog Entry 
-<MODE NAME="Quick.sfm (AV)" FILE="q.sfm.xml" FILE_NAME_GLOB="*.q.sfm" />
+<MODE NAME="Proof.sfm (AV)" FILE="q.sfm.xml" FILE_NAME_GLOB="*.q.sfm" />
 
 Jedit Token	USFM Tag
 COMMENT1	cat, cat#, ndx-ndx*, toc, toc#, toca, toca#
@@ -10,9 +10,9 @@ COMMENT2	h, h#, b, b#, ib, ib#,
 COMMENT3	rem
 COMMENT4	ef-ef*, ex-ex*, f-f*, fc-fc*, fdc-fdc*, fe-fe*
 DIGIT
-FUNCTION	fig-fig*, id, ide, jmp-jmp*, pb, sts, ts, periph, jmp-jmp*, x-x*, xdc-xdc*, xnt-xnt*, xot-xot*, xt-xt*,
+FUNCTION	fig-fig*, id, ide, jmp-jmp*, pb, periph, sts, ts, usfm,  x-x*, xdc-xdc*, xnt-xnt*, xot-xot*, xt-xt*, col, span, ie
 INVALID	<->, &-;, ', ",
-KEYWORD1	cd, cl, cls, fp, ie, iex, ili, ili#, im, im#, imi, imq, io, io#, ip, ip#, ipi, ipq, ipr, iq, iq#, k, K#, li, li#, lim, lim#, lit, m, mi, mr, nb, p, p#, ph, ph#, pi, pi#, pm, pmc, pmo, pmr, po, pr, ps, psi, q, q#, qc, qd, qm, qm#, qr,  tr, tr#
+KEYWORD1	cd, cl, cls, fp, iex, ili, ili#, im, im#, imi#, imq, io, io#, ip, ip#, ipi, ipq, ipr, iq, iq#, k, K#, li, li#, lim, lim#, lit, m, mi, mr, nb, p, p#, ph, ph#, pi, pi#, pm, pmc, pmo, pmr, po, pr, ps, psi, q, q#, qc, qd, qm, qm#, qr,  tr, tr#
 KEYWORD2	c, cp, v, tc, tc#, tcc, tcc#, tcr, tcr#, th, th#, thc, thc#, thr, thr#
 KEYWORD3	imt, imt#, imte, imte#, ms, ms#, mt, mt#, mte, mte#,
 KEYWORD4	d, iot, is, is#, lf, lh, qa, r, s, s#, sp, sr, xtSee, xtSeeAlso
@@ -81,18 +81,23 @@ OPERATOR	[punct:]
 		<SEQ_REGEXP HASH_CHAR="\ex " TYPE="COMMENT4">.+?\\ex\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ef " TYPE="COMMENT4">.+?\\ef\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\f " TYPE="COMMENT4">.+?\\f\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\fc " TYPE="COMMENT4">.+?\\fc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fdc " TYPE="COMMENT4">.+?\\fdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fe " TYPE="COMMENT4">.+?\\fe\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\fp" TYPE="COMMENT4">.+?\\fp\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\fs" TYPE="COMMENT4">.+?\\fs\*</SEQ_REGEXP>
 		
+		<EOL_SPAN TYPE="FUNCTION">\col</EOL_SPAN>
 		<SEQ_REGEXP HASH_CHAR="\fig" TYPE="FUNCTION">.+?\\fig\*</SEQ_REGEXP>
 		<EOL_SPAN TYPE="FUNCTION">\id </EOL_SPAN>
 		<EOL_SPAN TYPE="FUNCTION">\ide</EOL_SPAN>
 		<SEQ_REGEXP HASH_CHAR="\jmp" TYPE="FUNCTION">.+?\\jmp\*</SEQ_REGEXP>
 		<EOL_SPAN TYPE="FUNCTION">\pb</EOL_SPAN>
 		<EOL_SPAN TYPE="FUNCTION">\periph</EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\span</EOL_SPAN>
 		<EOL_SPAN TYPE="FUNCTION">\sts</EOL_SPAN>
 		<EOL_SPAN TYPE="FUNCTION">\ts</EOL_SPAN>
+		<EOL_SPAN TYPE="FUNCTION">\usfm</EOL_SPAN>
+		<SEQ_REGEXP HASH_CHAR="[{" TYPE="FUNCTION">.+\}\]</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\x " TYPE="FUNCTION">.+?\\x\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xdc " TYPE="FUNCTION">.+?\\xdc\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\xnt " TYPE="FUNCTION">.+?\\xnt\*</SEQ_REGEXP>
@@ -136,6 +141,17 @@ OPERATOR	[punct:]
 		<EOL_SPAN TYPE="KEYWORD3">\ms7 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\ms8 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\ms9 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse0 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse1 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse2 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse3 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse4 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse5 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse6 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse7 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse8 </EOL_SPAN>
+		<EOL_SPAN TYPE="KEYWORD3">\mse9 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt0 </EOL_SPAN>
 		<EOL_SPAN TYPE="KEYWORD3">\mt1 </EOL_SPAN>
@@ -199,8 +215,6 @@ OPERATOR	[punct:]
 		<SEQ_REGEXP HASH_CHAR="\wj " TYPE="LABEL">.+?\\wj\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\nd" TYPE="LABEL">.+?\\nd\*</SEQ_REGEXP>
 		
-		<SEQ_REGEXP HASH_CHAR="\fp" TYPE="LITERAL1">.+?\\fp\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\fs" TYPE="LITERAL1">.+?\\fs\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ft" TYPE="LITERAL1">.+?\\ft\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ino" TYPE="LITERAL1">.+?\\ino\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\no" TYPE="LITERAL1">.+?\\no\*</SEQ_REGEXP>
@@ -238,7 +252,7 @@ OPERATOR	[punct:]
 		<SEQ_REGEXP HASH_CHAR="\fr" TYPE="LITERAL3">.+?\\fr\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\fv" TYPE="LITERAL3">.+?\\fv\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\ibd" TYPE="LITERAL3">.+?\\ibd\*</SEQ_REGEXP>
-		<SEQ_REGEXP HASH_CHAR="\isd" TYPE="LITERAL3">.+?\\isb\*</SEQ_REGEXP>
+		<SEQ_REGEXP HASH_CHAR="\isb" TYPE="LITERAL3">.+?\\isb\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\k" TYPE="LITERAL3">.+?\\k\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\pro" TYPE="LITERAL3">.+?\\pro\*</SEQ_REGEXP>
 		<SEQ_REGEXP HASH_CHAR="\w " TYPE="LITERAL3">.+?\\w\*</SEQ_REGEXP>
@@ -268,7 +282,6 @@ OPERATOR	[punct:]
 			<KEYWORD1>\cd</KEYWORD1>
 			<KEYWORD1>\cls</KEYWORD1>
 			<KEYWORD1>\fp</KEYWORD1>
-			<KEYWORD1>\ie</KEYWORD1>
 			<KEYWORD1>\iex</KEYWORD1>
 			<KEYWORD1>\ili0</KEYWORD1>
 			<KEYWORD1>\ili1</KEYWORD1>
@@ -292,6 +305,16 @@ OPERATOR	[punct:]
 			<KEYWORD1>\im8</KEYWORD1>
 			<KEYWORD1>\im9</KEYWORD1>
 			<KEYWORD1>\im</KEYWORD1>
+			<KEYWORD1>\imi0</KEYWORD1>
+			<KEYWORD1>\imi1</KEYWORD1>
+			<KEYWORD1>\imi2</KEYWORD1>
+			<KEYWORD1>\imi3</KEYWORD1>
+			<KEYWORD1>\imi4</KEYWORD1>
+			<KEYWORD1>\imi5</KEYWORD1>
+			<KEYWORD1>\imi6</KEYWORD1>
+			<KEYWORD1>\imi7</KEYWORD1>
+			<KEYWORD1>\imi8</KEYWORD1>
+			<KEYWORD1>\imi9</KEYWORD1>
 			<KEYWORD1>\imi</KEYWORD1>
 			<KEYWORD1>\imq</KEYWORD1>
 			<KEYWORD1>\io0</KEYWORD1>
@@ -446,6 +469,7 @@ OPERATOR	[punct:]
 			<KEYWORD1>\tr8</KEYWORD1>
 			<KEYWORD1>\tr9</KEYWORD1>
 			<KEYWORD1>\tr</KEYWORD1>
+			<KEYWORD2>\ie</KEYWORD2>
 			<KEYWORD2>\tc0</KEYWORD2>
 			<KEYWORD2>\tc1</KEYWORD2>
 			<KEYWORD2>\tc2</KEYWORD2>

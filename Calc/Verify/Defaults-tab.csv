@@ -1,588 +1,599 @@
-						Code	Digits		OO	P1	Char		=SUM(M2:M612)	
-									1		"<?xml version=""1.0"" encoding=""UTF-8""?>"			
-									2		"<office:document xmlns:office=""urn:oasis:names:tc:opendocument:xmlns:office:1.0"" xmlns:style=""urn:oasis:names:tc:opendocument:xmlns:style:1.0"" xmlns:text=""urn:oasis:names:tc:opendocument:xmlns:text:1.0"" xmlns:table=""urn:oasis:names:tc:opendocument:xmlns:table:1.0"" xmlns:draw=""urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"" xmlns:fo=""urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"" xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:meta=""urn:oasis:names:tc:opendocument:xmlns:meta:1.0"" xmlns:number=""urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"" xmlns:svg=""urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"" xmlns:chart=""urn:oasis:names:tc:opendocument:xmlns:chart:1.0"" xmlns:dr3d=""urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"" xmlns:math=""http://www.w3.org/1998/Math/MathML"" xmlns:form=""urn:oasis:names:tc:opendocument:xmlns:form:1.0"" xmlns:script=""urn:oasis:names:tc:opendocument:xmlns:script:1.0"" xmlns:config=""urn:oasis:names:tc:opendocument:xmlns:config:1.0"" xmlns:ooo=""http://openoffice.org/2004/office"" xmlns:ooow=""http://openoffice.org/2004/writer"" xmlns:oooc=""http://openoffice.org/2004/calc"" xmlns:dom=""http://www.w3.org/2001/xml-events"" xmlns:xforms=""http://www.w3.org/2002/xforms"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:rpt=""http://openoffice.org/2005/report"" xmlns:of=""urn:oasis:names:tc:opendocument:xmlns:of:1.2"" xmlns:xhtml=""http://www.w3.org/1999/xhtml"" xmlns:grddl=""http://www.w3.org/2003/g/data-view#"" xmlns:officeooo=""http://openoffice.org/2009/office"" xmlns:tableooo=""http://openoffice.org/2009/table"" xmlns:drawooo=""http://openoffice.org/2010/draw"" xmlns:calcext=""urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0"" xmlns:loext=""urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0"" xmlns:field=""urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0"" xmlns:formx=""urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0"" xmlns:css3t=""http://www.w3.org/TR/css3-text/"" office:version=""1.2"" office:mimetype=""application/vnd.oasis.opendocument.text""><office:meta>"			"style:num-suffix="": "" "
-									3		"=""<dc:description>""&Conf.$C$2&"" Stylesheet: ""&'Tag List'.$A$1&"" ""&'Font List'.$D$1&"" created ""&YEAR(TODAY())&""/""&RIGHT(""0""&MONTH(TODAY()),2)&""/""&RIGHT(""0""&DAY(TODAY()),2)&"" ""&Conf.$C$4&""</dc:description>"""			
-									4		"=""<meta:generator>""&Conf.$C$2&"".""&RIGHT(""00""&DAY(NOW()),2)&"" bld""&ROUND((24*(NOW()-INT(NOW()))),4)&""</meta:generator>"""			
-									4		</office:meta><office:settings>			
-									5		"=""<config:config-item config:name=""""UseFormerLineSpacing"""" config:type=""""boolean"""">""&Conf.$L$128&""</config:config-item>"""			
-									6		"=""<config:config-item config:name=""""UseFormerTextWrapping"""" config:type=""""boolean"""">""&Conf.$L$129&""</config:config-item>"""			
-									7		"=""<config:config-item config:name=""""UseFormerObjectPositioning"""" config:type=""""boolean"""">""&Conf.$L$130&""</config:config-item>"""			
-									8		"=""<config:config-item config:name=""""UseOldPrinterMetrics"""" config:type=""""boolean"""">""&Conf.$L$131&""</config:config-item>"""			
-									9		"=""<config:config-item config:name=""""PrinterIndependentLayout"""" config:type=""""string"""">""&Conf.$D$132&""</config:config-item>"""			
-									10		"=""<config:config-item config:name=""""CharacterCompressionType"""" config:type=""""short"""">""&Conf.$D$133&""</config:config-item>"""			
-									11		"=""<config:config-item config:name=""""IsKernAsianPunctuation"""" config:type=""""boolean"""">""&Conf.$L$134&""</config:config-item>"""			
-									12		"=""<config:config-item config:name=""""PrintBlackFonts"""" config:type=""""boolean"""">""&Conf.$L$135&""</config:config-item>"""			
-									13		"=""<config:config-item config:name=""""PrintEmptyPages"""" config:type=""""boolean"""">""&Conf.$L$136&""</config:config-item>"""			
-									14		 			
-									15		</office:settings><office:scripts>			
-									16		</office:scripts><office:font-face-decls>			
-									17		</office:font-face-decls><office:styles>			
-									18		"<style:style style:name=""Standard"" style:family=""paragraph"" style:parent-style-name=""m"" style:class=""text""/>"			
-									19		"<style:style style:name=""Caption_20_characters"" style:display-name=""Caption characters"" style:parent-style-name=""fq"" style:family=""text"" style:hidden=""true""/>"			
-									20		"<style:style style:name=""Bullet_20_Symbols"" style:display-name=""Bullet Symbols"" style:family=""text"" style:hidden=""true""/>"			
-									21		"<style:style style:name=""Definition"" style:family=""text"" style:hidden=""true""/>"			
-									22		"<style:style style:name=""Drop_20_Caps"" style:display-name=""Drop Caps"" style:parent-style-name=""c"" style:family=""text"" style:hidden=""true""/>"			
-									23		"<style:style style:name=""Emphasis"" style:parent-style-name=""em"" style:family=""text"" style:hidden=""true""/>"			
-									24		"=""<style:style style:name=""""Endnote_20_Symbol"""" style:display-name=""""Endnote Symbol"""" style:parent-style-name=""""""&Conf.$D$93&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""			
-									25		"=""<style:style style:name=""""Endnote_20_anchor"""" style:display-name=""""Endnote anchor"""" style:parent-style-name=""""""&Conf.$D$94&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""			
-									26		"<style:style style:name=""Example"" style:family=""text"" style:hidden=""true""/>"			
-									27		"=""<style:style style:name=""""Footnote_20_Symbol"""" style:display-name=""""Footnote Symbol"""" style:parent-style-name=""""""&Conf.$D$78&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""			
-									28		"=""<style:style style:name=""""Footnote_20_anchor"""" style:display-name=""""Footnote anchor"""" style:parent-style-name=""""""&Conf.$D$79&"""""" style:family=""""text"""" style:hidden=""""true""""><style:text-properties style:text-position=""""super 58%""""/></style:style>"""			
-									29		"<style:style style:name=""Index_20_Link"" style:display-name=""Index Link"" style:parent-style-name=""im"" style:family=""text"" style:hidden=""true""/>"			
-									30		"<style:style style:name=""Internet_20_link"" style:display-name=""Internet link"" style:family=""text"" style:hidden=""true""/>"			
-									31		"<style:style style:name=""Line_20_numbering"" style:display-name=""Line numbering"" style:family=""text"" style:hidden=""true""/>"			
-									32		"<style:style style:name=""Main_20_index_20_entry"" style:display-name=""Main index entry"" style:parent-style-name=""im"" style:family=""text"" style:hidden=""true""/>"			
-									33		"<style:style style:name=""Numbering_20_Symbols"" style:display-name=""Numbering Symbols"" style:family=""text"" style:hidden=""true""/>"			
-									34		"<style:style style:name=""Page_20_Number"" style:display-name=""Page Number"" style:parent-style-name=""ms9"" style:family=""text"" style:hidden=""true""/>"			
-									35		"<style:style style:name=""Placeholder"" style:family=""text"" style:hidden=""true""/>"			
-									36		"<style:style style:name=""Formula"" style:family=""graphic"" style:hidden=""true""/>"			
-									37		"<style:style style:name=""Frame"" style:family=""graphic"" style:hidden=""true""/>"			
-									38		"<style:style style:name=""Graphics"" style:family=""graphic"" style:hidden=""true""/>"			
-									39		"<style:style style:name=""Labels"" style:family=""graphic"" style:hidden=""true"" style:auto-update=""true""/>"			
-									40		"<style:style style:name=""Marginalia"" style:family=""graphic"" style:hidden=""true""/>"			
-									41		"<style:style style:name=""OLE"" style:family=""graphic"" style:hidden=""true""/>
-"			
-									42		"<style:style style:name=""Watermark"" style:family=""graphic"" style:hidden=""true""/>"			
-									100	m				
-									101	f				
-									102	im				
-									103	iq				
-									104	mt				
-									105	q				
-									106	cat				
-									107	cn				
-									108	qvs				
-									109	vn				
-									110	cl				
-									111	cp				
-									112	id				
-									113	periph				
-									114	rem				
-									115	_				
-									116	qs				
-									117	v				
-									118	vp				
-									119	c				
-									120	col				
-									121	span				
-									122		"<style:style style:name=""fig"" style:family=""graphic"" style:parent-style-name=""Graphics""> <style:graphic-properties style:wrap=""none"" style:vertical-pos=""top"" style:vertical-rel=""paragraph-content"" style:horizontal-pos=""center"" style:horizontal-rel=""paragraph-content"" style:mirror=""none"" fo:clip=""rect(0pt, 0pt, 0pt, 0pt)"" draw:luminance=""0%"" draw:contrast=""0%"" draw:red=""0%"" draw:green=""0%"" draw:blue=""0%"" draw:gamma=""100%"" draw:color-inversion=""false"" draw:image-opacity=""100%"" draw:color-mode=""standard"" loext:rel-width-rel=""paragraph"" loext:rel-height-rel=""paragraph""/> </style:style>"			
-									123	jmp				
-									124	w				
-									125	ts				
-									126	b				
-									127	b0				
-									128	b1				
-									129	b2				
-									130	b3				
-									131	b4				
-									132	b5				
-									133	b6				
-									134	b7				
-									135	b8				
-									136	b9				
-									137	cd				
-									138	cls				
-									139	d				
-									140	erq				
-									141	ib				
-									142	ib0				
-									143	ib1				
-									144	ib2				
-									145	ib3				
-									146	ib4				
-									147	ib5				
-									148	ib6				
-									149	ib7				
-									150	ib8				
-									151	ib9				
-									152	ie				
-									153	iex				
-									154	ili				
-									155	ili0				
-									156	ili1				
-									157	ili2				
-									158	ili3				
-									159	ili4				
-									160	ili5				
-									161	ili6				
-									162	ili7				
-									163	ili8				
-									164	ili9				
-									165	im0				
-									166	im1				
-									167	im2				
-									168	im3				
-									169	im4				
-									170	im5				
-									171	im6				
-									172	im7				
-									173	im8				
-									174	im9				
-									175	imi				
-									176	imi0				
-									177	imi1				
-									178	imi2				
-									179	imi3				
-									180	imi4				
-									181	imi5				
-									182	imi6				
-									183	imi7				
-									184	imi8				
-									185	imi9				
-									186	imq				
-									187	imt				
-									188	imt0				
-									189	imt1				
-									190	imt2				
-									191	imt3				
-									192	imt4				
-									193	imt5				
-									194	imt6				
-									195	imt7				
-									196	imt8				
-									197	imt9				
-									198	imte				
-									199	imte0				
-									200	imte1				
-									201	imte2				
-									202	imte3				
-									203	imte4				
-									204	imte5				
-									205	imte6				
-									206	imte7				
-									207	imte8				
-									208	imte9				
-									209	io				
-									210	io0				
-									211	io1				
-									212	io2				
-									213	io3				
-									214	io4				
-									215	io5				
-									216	io6				
-									217	io7				
-									218	io8				
-									219	io9				
-									220	iot				
-									221	ip				
-									222	ip0				
-									223	ip1				
-									224	ip2				
-									225	ip3				
-									226	ip4				
-									227	ip5				
-									228	ip6				
-									229	ip7				
-									230	ip8				
-									231	ip9				
-									232	ipi				
-									233	ipq				
-									234	ipr				
-									235	iq0				
-									236	iq1				
-									237	iq2				
-									238	iq3				
-									239	iq4				
-									240	iq5				
-									241	iq6				
-									242	iq7				
-									243	iq8				
-									244	iq9				
-									245	is				
-									246	is0				
-									247	is1				
-									248	is2				
-									249	is3				
-									250	is4				
-									251	is5				
-									252	is6				
-									253	is7				
-									254	is8				
-									255	is9				
-									256	k				
-									257	k0				
-									258	k1				
-									259	k2				
-									260	k3				
-									261	k4				
-									262	k5				
-									263	k6				
-									264	k7				
-									265	k8				
-									266	k9				
-									267	lf				
-									268	lh				
-									269	li				
-									270	li0				
-									271	li1				
-									272	li2				
-									273	li3				
-									274	li4				
-									275	li5				
-									276	li6				
-									277	li7				
-									278	li8				
-									279	li9				
-									280	lim				
-									281	lim0				
-									282	lim1				
-									283	lim2				
-									284	lim3				
-									285	lim4				
-									286	lim5				
-									287	lim6				
-									288	lim7				
-									289	lim8				
-									290	lim9				
-									291	lit				
-									292	mi				
-									293	mr				
-									294	ms				
-									295	ms0				
-									296	ms1				
-									297	ms2				
-									298	ms3				
-									299	ms4				
-									300	ms5				
-									301	ms6				
-									302	ms7				
-									303	ms8				
-									304	ms9				
-									305	mt0				
-									306	mt1				
-									307	mt2				
-									308	mt3				
-									309	mt4				
-									310	mt5				
-									311	mt6				
-									312	mt7				
-									313	mt8				
-									314	mt9				
-									315	mte				
-									316	mte0				
-									317	mte1				
-									318	mte2				
-									319	mte3				
-									320	mte4				
-									321	mte5				
-									322	mte6				
-									323	mte7				
-									324	mte8				
-									325	mte9				
-									326	nb				
-									327	p				
-									328	p0				
-									329	p1				
-									330	p2				
-									331	p3				
-									332	p4				
-									333	p5				
-									334	p6				
-									335	p7				
-									336	p8				
-									337	p9				
-									338	pb				
-									339	pb0				
-									340	pb1				
-									341	pc				
-									342	ph				
-									343	ph0				
-									344	ph1				
-									345	ph2				
-									346	ph3				
-									347	ph4				
-									348	ph5				
-									349	ph6				
-									350	ph7				
-									351	ph8				
-									352	ph9				
-									353	pi				
-									354	pi0				
-									355	pi1				
-									356	pi2				
-									357	pi3				
-									358	pi4				
-									359	pi5				
-									360	pi6				
-									361	pi7				
-									362	pi8				
-									363	pi9				
-									364	pm				
-									365	pmc				
-									366	pmo				
-									367	pmr				
-									368	po				
-									369	pr				
-									370	ps				
-									371	psi				
-									372	q0				
-									373	q1				
-									374	q2				
-									375	q3				
-									376	q4				
-									377	q5				
-									378	q6				
-									379	q7				
-									380	q8				
-									381	q9				
-									382	qa				
-									383	qc				
-									384	qd				
-									385	qm				
-									386	qm0				
-									387	qm1				
-									388	qm2				
-									389	qm3				
-									390	qm4				
-									391	qm5				
-									392	qm6				
-									393	qm7				
-									394	qm8				
-									395	qm9				
-									396	qr				
-									397	r				
-									398	s				
-									399	s0				
-									400	s1				
-									401	s2				
-									402	s3				
-									403	s4				
-									404	s5				
-									405	s6				
-									406	s7				
-									407	s8				
-									408	s9				
-									409	sd				
-									410	sd0				
-									411	sd1				
-									412	sd2				
-									413	sd3				
-									414	sd4				
-									415	sd5				
-									416	sd6				
-									417	sd7				
-									418	sd8				
-									419	sd9				
-									420	sp				
-									421	sr				
-									422	ef				
-									423	ex				
-									424	fdc				
-									425	fe				
-									426	fp				
-									427	fs				
-									428	x				
-									429	xdc				
-									430	xnt				
-									431	xot				
-									432	-				
-									433	+				
-									434	add				
-									435	addpn				
-									436	bd				
-									437	bdit				
-									438	bk				
-									439	ca				
-									440	dc				
-									441	em				
-									442	fk				
-									443	fl				
-									444	fm				
-									445	fq				
-									446	fqa				
-									447	fr				
-									448	ft				
-									449	fv				
-									450	fw				
-									451	ior				
-									452	iqt				
-									453	it				
-									454	ibd				
-									455	ino				
-									456	iem				
-									457	iti				
-									458	isb				
-									459	k				
-									460	lik				
-									461	litl				
-									462	liv				
-									463	liv0				
-									464	liv1				
-									465	liv2				
-									466	liv3				
-									467	liv4				
-									468	liv5				
-									469	liv6				
-									470	lIv7				
-									471	lIv8				
-									472	liv9				
-									473	n				
-									474	nd				
-									475	ndx				
-									476	nh				
-									477	nl				
-									478	no				
-									479	ord				
-									480	pn				
-									481	png				
-									482	pro				
-									483	qac				
-									484	qt				
-									485	rb				
-									486	rq				
-									487	rt				
-									488	sc				
-									489	sig				
-									490	sls				
-									491	sup				
-									492	tl				
-									493	va				
-									494	w				
-									495	wa				
-									496	wg				
-									497	wh				
-									498	wj				
-									499	wr				
-									500	xk				
-									501	xo				
-									502	xop				
-									503	xq				
-									504	xt				
-									505	xta				
-									506	tc0				
-									507	tc1				
-									508	tc2				
-									509	tc3				
-									510	tc4				
-									511	tc5				
-									512	tc6				
-									513	tc7				
-									514	tc8				
-									515	tc9				
-									516	tcc0				
-									517	tcc1				
-									518	tcc2				
-									519	tcc3				
-									520	tcc4				
-									521	tcc5				
-									522	tcc6				
-									523	tcc7				
-									524	tcc8				
-									525	tcc9				
-									526	tcr0				
-									527	tcr1				
-									528	tcr2				
-									529	tcr3				
-									530	tcr4				
-									531	tcr5				
-									532	tcr6				
-									533	tcr7				
-									534	tcr8				
-									535	tcr9				
-									536	th0				
-									537	th1				
-									538	th2				
-									539	th3				
-									540	th4				
-									541	th5				
-									542	th6				
-									543	th7				
-									544	th8				
-									545	th9				
-									546	thc0				
-									547	thc1				
-									548	thc2				
-									549	thc3				
-									550	thc4				
-									551	thc5				
-									552	thc6				
-									553	thc7				
-									554	thc8				
-									555	thc9				
-									556	thr0				
-									557	thr1				
-									558	thr2				
-									559	thr3				
-									560	thr4				
-									561	thr5				
-									562	thr6				
-									563	thr7				
-									564	thr8				
-									565	thr9				
-									566	toc				
-									567	toc1				
-									568	toc2				
-									569	toc3				
-									570	toc4				
-									571	toc5				
-									572	toc6				
-									573	toc7				
-									574	toc8				
-									575	toc9				
-									576	toc0				
-									577	toca				
-									578	toca1				
-									579	toca2				
-									580	toca3				
-									581	toca4				
-									582	toca5				
-									583	toca6				
-									584	toca7				
-									585	toca8				
-									586	toca9				
-									587	toca0				
-									588	tr				
-									589	tr0				
-									590	tr1				
-									591	tr2				
-									592	tr3				
-									593	tr4				
-									594	tr5				
-									595	tr6				
-									596	tr7				
-									597	tr8				
-									598	tr9				
-									599	Footer				
-									600	Header				
-									800		"=""<text:notes-configuration text:note-class=""""footnote"""" text:default-style-name=""""f"""" text:citation-style-name=""""""&Conf.$D$78&"""""" text:citation-body-style-name=""""""&Conf.$D$79&"""""" text:master-page-name=""""Footnote"""" style:num-format=""""""&Conf.$D$80&"""""" style:num-prefix=""""""&Conf.$D$84&"""""" style:num-suffix=""""""&Conf.$D$85&"""""" text:start-value=""""0"""" text:footnotes-position=""""page"""" text:start-numbering-at=""""""&Conf.$D$83&""""""/>"""			
-									801		</office:styles><office:automatic-styles>			
-									802		"<style:style style:name=""P1"" style:family=""paragraph"" style:parent-style-name=""m"" style:master-page-name=""Text""><style:paragraph-properties style:page-number=""auto""/></style:style>"			
-									803		"=""<style:page-layout style:name=""""text"""" style:page-usage=""""mirrored""""> <style:page-layout-properties fo:page-width=""""""&(Conf.$D$20/25.4*72)&""pt"""" fo:page-height=""""""&(Conf.$D$21/25.4*72)&""pt"""" style:num-format=""""1, 2, 3, ..."""" style:print-orientation=""""portrait"""" fo:margin-top=""""""&Conf.$D$23&""pt"""" fo:margin-bottom=""""""&Conf.$D$23&""pt"""" fo:margin-left=""""""&Conf.$D$22&""pt"""" fo:margin-right=""""""&Conf.$D$23&""pt"""" fo:border-top=""""""&IF(Conf.$I$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""0pt"""" fo:padding-bottom=""""0pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" style:register-truth-ref-style-name=""""'""&Conf.$D$27&""'"""" style:writing-mode=""""""&Conf.$D$137&"""""" draw:fill=""""""&$Conf.$D$32&"""""" draw:fill-color=""""#""&Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%"""" style:footnote-max-height=""""""&Conf.$L$83&""pt""""> <style:columns fo:column-count=""""1"""" fo:column-gap=""""0pt""""/> <style:footnote-sep style:width=""""""&Conf.$D$62&""pt"""" style:distance-before-sep=""""""&(Conf.$L$82/2)&""pt"""" style:distance-after-sep=""""""&(Conf.$L$82/2)&""pt"""" style:line-style=""""""&Conf.$L$60&"""""" style:adjustment=""""center"""" style:rel-width=""""98%"""" style:color=""""#""&Conf.$L$61&""""""/> </style:page-layout-properties>"""			
-									804		"=""<style:header-style> <style:header-footer-properties svg:height=""""""&Conf.$D$45&""pt"""" fo:margin-left=""""""&Conf.$D$41&""pt"""" fo:margin-right=""""""&Conf.$D$42&""pt"""" fo:margin-bottom=""""""&Conf.$D$43&""pt"""" fo:border-top=""""""&IF(Conf.$I$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""0pt"""" fo:padding-bottom=""""""&Conf.$D$43&""pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" fo:background-color=""""#""&Conf.$L$33&"""""" style:dynamic-spacing=""""""&Conf.$L$55&"""""" draw:fill=""""""&Conf.$D$32&"""""" draw:fill-color=""""#""&Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%""""/> </style:header-style> <style:footer-style> <style:header-footer-properties fo:min-height=""""""&Conf.$D$56&""pt"""" fo:margin-left=""""0pt"""" fo:margin-right=""""0pt"""" fo:margin-top=""""""&$Conf.$D$54&""pt"""" fo:border-top=""""""&IF(Conf.$I$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""""&$Conf.$D$54&""pt"""" fo:padding-bottom=""""0pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" fo:background-color=""""#""&$Conf.$L$33&"""""" style:dynamic-spacing=""""""&$Conf.$L$55&"""""" draw:fill=""""""&$Conf.$D$32&"""""" draw:fill-color=""""#""&$Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%""""/> </style:footer-style>   </style:page-layout>"""			
-									805		"=""<style:style style:name=""""Body"""" style:family=""""section"""">   <style:section-properties fo:background-color=""""transparent"""" text:dont-balance-text-columns=""""false"""" style:editable=""""false""""> <style:columns fo:column-count=""""""&Conf.$D$11&"""""" fo:column-gap=""""""&Conf.$D$25&""pt""""> <style:column-sep style:width=""""""&Conf.$D$62&""pt"""" style:color=""""#""&$Conf.$L$61&"""""" style:height=""""99%"""" style:style=""""""&Conf.$L$60&""""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""0pt"""" fo:end-indent=""""""&Conf.$D$25/2&""pt""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""""&Conf.$D$25/2&""pt"""" fo:end-indent=""""0pt""""/> </style:columns>    <style:background-image/> <text:notes-configuration text:note-class=""""footnote""""/> <text:notes-configuration text:note-class=""""endnote""""/> </style:section-properties></style:style>"""			
-									806		"=""<style:style style:name=""""Span"""" style:family=""""section"""">  <style:section-properties fo:background-color=""""transparent"""" text:dont-balance-text-columns=""""false"""" style:editable=""""false""""> <style:columns fo:column-count=""""1""""> <style:column-sep style:width=""""0.26pt"""" style:color=""""#000000"""" style:height=""""99%"""" style:style=""""none""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""0pt"""" fo:end-indent=""""0pt""""/>  </style:columns>  <style:background-image/> <text:notes-configuration text:note-class=""""footnote""""/> <text:notes-configuration text:note-class=""""endnote""""/> </style:section-properties></style:style>"""			
-									807		</office:automatic-styles><office:master-styles>			
-									808		"<style:master-page style:name=""Standard"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									809		"<style:master-page style:name=""Endnote"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									810		"<style:master-page style:name=""Envelope"" style:hidden=""true"" style:page-layout-name=""span""/>"			
-									811		"<style:master-page style:name=""First_20_Page"" style:display-name=""First Page"" style:page-layout-name=""pm4"" style:next-style-name=""text""/>"			
-									812		"<style:master-page style:name=""Footnote"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									813		"<style:master-page style:name=""Footer"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									814		"<style:master-page style:name=""Header"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									815		"<style:master-page style:name=""HTML"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									816		"<style:master-page style:name=""Index"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									817		"<style:master-page style:name=""Landscape"" style:hidden=""true"" style:page-layout-name=""text""/>"			
-									818		"<style:master-page style:name=""Left_20_Page"" style:hidden=""true"" style:display-name=""Left Page"" style:page-layout-name=""text"" style:next-style-name=""Right_20_Page""/>"			
-									819		"<style:master-page style:name=""Right_20_Page"" style:hidden=""true"" style:display-name=""Right Page"" style:page-layout-name=""text"" style:next-style-name=""Left_20_Page""/>"			
-									820		"=""<style:master-page style:name=""""Text"""" style:page-layout-name=""""text"""">""&IF(Conf.$D$38=1,""<style:header> <text:p text:style-name=""""Header"""">""&$Conf.$D$47&""</text:p></style:header>""&IF(Conf.$D$39=1,"""",""<style:header-left> <text:p text:style-name=""""Header"""">""&$Conf.$D$48&""</text:p></style:header-left>""),"""")&IF(Conf.$D$49=1,""<style:footer> <text:p text:style-name=""""Footer"""">""&$Conf.$D$57&""</text:p></style:footer>""&IF(Conf.$D$50=1,"""",""<style:footer-left> <text:p text:style-name=""""Footer"""">""&$Conf.$D$58&""</text:p></style:footer-left>""),"""")&"" </style:master-page>"""			
-									821		</office:master-styles><office:body>			
-									822		<office:text>			
-									900		"=""<text:variable-decls>""&CONCAT($'Tag List'.$AS$2:$'Tag List'.$AS$1000)&""</text:variable-decls>"""			
-									901		<text:sequence-decls></text:sequence-decls>			
-									902		"<text:section text:style-name=""Span"" text:name=""Intro"">"			
-									903		"=""<text:p text:style-name=""""P1""""></text:p>"""			
-									904		</text:section>			
-									905		</office:text></office:body></office:document>			
-									906		 			
-									907		 			
-									908		 			
-									909		 			
-									910		 			
-									911		 			
-									912		 			
-									913		 			
-									914		" 
-"			
+						Code	Digits		Sect	P1	If Text is here, Evangard doesn't yet manage it. Rows that are formulae here are hacks.	OO	=SUM(M2:M623)	<Errors in this list.
+									A		"<?xml version=""1.0"" encoding=""UTF-8""?>"	1		
+									A		"<office:document xmlns:office=""urn:oasis:names:tc:opendocument:xmlns:office:1.0"" xmlns:style=""urn:oasis:names:tc:opendocument:xmlns:style:1.0"" xmlns:text=""urn:oasis:names:tc:opendocument:xmlns:text:1.0"" xmlns:table=""urn:oasis:names:tc:opendocument:xmlns:table:1.0"" xmlns:draw=""urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"" xmlns:fo=""urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"" xmlns:xlink=""http://www.w3.org/1999/xlink"" xmlns:dc=""http://purl.org/dc/elements/1.1/"" xmlns:meta=""urn:oasis:names:tc:opendocument:xmlns:meta:1.0"" xmlns:number=""urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"" xmlns:svg=""urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"" xmlns:chart=""urn:oasis:names:tc:opendocument:xmlns:chart:1.0"" xmlns:dr3d=""urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0"" xmlns:math=""http://www.w3.org/1998/Math/MathML"" xmlns:form=""urn:oasis:names:tc:opendocument:xmlns:form:1.0"" xmlns:script=""urn:oasis:names:tc:opendocument:xmlns:script:1.0"" xmlns:config=""urn:oasis:names:tc:opendocument:xmlns:config:1.0"" xmlns:ooo=""http://openoffice.org/2004/office"" xmlns:ooow=""http://openoffice.org/2004/writer"" xmlns:oooc=""http://openoffice.org/2004/calc"" xmlns:dom=""http://www.w3.org/2001/xml-events"" xmlns:xforms=""http://www.w3.org/2002/xforms"" xmlns:xsd=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xmlns:rpt=""http://openoffice.org/2005/report"" xmlns:of=""urn:oasis:names:tc:opendocument:xmlns:of:1.2"" xmlns:xhtml=""http://www.w3.org/1999/xhtml"" xmlns:grddl=""http://www.w3.org/2003/g/data-view#"" xmlns:officeooo=""http://openoffice.org/2009/office"" xmlns:tableooo=""http://openoffice.org/2009/table"" xmlns:drawooo=""http://openoffice.org/2010/draw"" xmlns:calcext=""urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0"" xmlns:loext=""urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0"" xmlns:field=""urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0"" xmlns:formx=""urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0"" xmlns:css3t=""http://www.w3.org/TR/css3-text/"" office:version=""1.2"" office:mimetype=""application/vnd.oasis.opendocument.text""><office:meta>"	2		"style:num-suffix="": "" "
+									A		"=""<dc:description>""&Conf.$C$2&"" Stylesheet: ""&'Tag List'.$A$1&"" ""&'Font List'.$D$1&"" created ""&YEAR(TODAY())&""/""&RIGHT(""0""&MONTH(TODAY()),2)&""/""&RIGHT(""0""&DAY(TODAY()),2)&"" ""&Conf.$C$4&""</dc:description>"""	3		
+									A		"=""<meta:generator>""&Conf.$C$2&"".""&RIGHT(""00""&DAY(NOW()),2)&"" bld""&ROUND((24*(NOW()-INT(NOW()))),4)&""</meta:generator>"""	4		
+									A		</office:meta><office:settings>	5		
+									B		"=""<config:config-item config:name=""""UseFormerLineSpacing"""" config:type=""""boolean"""">""&Conf.$L$128&""</config:config-item>"""	6		
+									B		"=""<config:config-item config:name=""""UseFormerTextWrapping"""" config:type=""""boolean"""">""&Conf.$L$129&""</config:config-item>"""	7		
+									B		"=""<config:config-item config:name=""""UseFormerObjectPositioning"""" config:type=""""boolean"""">""&Conf.$L$130&""</config:config-item>"""	8		
+									B		"=""<config:config-item config:name=""""UseOldPrinterMetrics"""" config:type=""""boolean"""">""&Conf.$L$131&""</config:config-item>"""	9		
+									B		"=""<config:config-item config:name=""""PrinterIndependentLayout"""" config:type=""""string"""">""&Conf.$D$132&""</config:config-item>"""	10		
+									B		"=""<config:config-item config:name=""""CharacterCompressionType"""" config:type=""""short"""">""&Conf.$D$133&""</config:config-item>"""	11		
+									B		"=""<config:config-item config:name=""""IsKernAsianPunctuation"""" config:type=""""boolean"""">""&Conf.$L$134&""</config:config-item>"""	12		
+									B		"=""<config:config-item config:name=""""PrintBlackFonts"""" config:type=""""boolean"""">""&Conf.$L$135&""</config:config-item>"""	13		
+									B		"=""<config:config-item config:name=""""PrintEmptyPages"""" config:type=""""boolean"""">""&Conf.$L$136&""</config:config-item>"""	14		
+									B		 	15		
+									B		</office:settings><office:scripts>	16		
+									C		</office:scripts><office:font-face-decls>	17		
+									D		</office:font-face-decls><office:styles>	18		
+									D		"<style:style style:name=""Standard"" style:family=""paragraph"" style:parent-style-name=""m"" style:class=""text""/>"	19		
+									D		"<style:style style:name=""Caption_20_characters"" style:display-name=""Caption characters"" style:parent-style-name=""fq"" style:family=""text"" style:hidden=""true""/>"	20		
+									D		"<style:style style:name=""Bullet_20_Symbols"" style:display-name=""Bullet Symbols"" style:family=""text"" style:hidden=""true""/>"	21		
+									D		"<style:style style:name=""Definition"" style:family=""text"" style:hidden=""true""/>"	22		
+									D		"<style:style style:name=""Drop_20_Caps"" style:display-name=""Drop Caps"" style:parent-style-name=""c"" style:family=""text"" style:hidden=""true""/>"	23		
+									D		"<style:style style:name=""Emphasis"" style:parent-style-name=""em"" style:family=""text"" style:hidden=""true""/>"	24		
+									D		"=""<style:style style:name=""""Endnote_20_Symbol"""" style:display-name=""""Endnote Symbol"""" style:parent-style-name=""""""&Conf.$D$93&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""	25		
+									D		"=""<style:style style:name=""""Endnote_20_anchor"""" style:display-name=""""Endnote anchor"""" style:parent-style-name=""""""&Conf.$D$94&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""	26		
+									D		"<style:style style:name=""Example"" style:family=""text"" style:hidden=""true""/>"	27		
+									D		"=""<style:style style:name=""""Footnote_20_Symbol"""" style:display-name=""""Footnote Symbol"""" style:parent-style-name=""""""&Conf.$D$78&"""""" style:family=""""text"""" style:hidden=""""true""""/>"""	28		
+									D		"=""<style:style style:name=""""Footnote_20_anchor"""" style:display-name=""""Footnote anchor"""" style:parent-style-name=""""""&Conf.$D$79&"""""" style:family=""""text"""" style:hidden=""""true""""><style:text-properties style:text-position=""""super 58%""""/></style:style>"""	29		
+									D		"<style:style style:name=""Index_20_Link"" style:display-name=""Index Link"" style:parent-style-name=""im"" style:family=""text"" style:hidden=""true""/>"	30		
+									D		"<style:style style:name=""Internet_20_link"" style:display-name=""Internet link"" style:family=""text"" style:hidden=""true""/>"	31		
+									D		"<style:style style:name=""Line_20_numbering"" style:display-name=""Line numbering"" style:family=""text"" style:hidden=""true""/>"	32		
+									D		"<style:style style:name=""Main_20_index_20_entry"" style:display-name=""Main index entry"" style:parent-style-name=""im"" style:family=""text"" style:hidden=""true""/>"	33		
+									D		"<style:style style:name=""Numbering_20_Symbols"" style:display-name=""Numbering Symbols"" style:family=""text"" style:hidden=""true""/>"	34		
+									D		"<style:style style:name=""Page_20_Number"" style:display-name=""Page Number"" style:parent-style-name=""ms9"" style:family=""text"" style:hidden=""true""/>"	35		
+									D		"<style:style style:name=""Placeholder"" style:family=""text"" style:hidden=""true""/>"	36		
+									D		"<style:style style:name=""Formula"" style:family=""graphic"" style:hidden=""true""/>"	37		
+									D		"<style:style style:name=""Frame"" style:family=""graphic"" style:hidden=""true""/>"	38		
+									D		"<style:style style:name=""Graphics"" style:family=""graphic"" style:hidden=""true""/>"	39		
+									D		"<style:style style:name=""Labels"" style:family=""graphic"" style:hidden=""true"" style:auto-update=""true""/>"	40		
+									D		"<style:style style:name=""Marginalia"" style:family=""graphic"" style:hidden=""true""/>"	41		
+									D		"<style:style style:name=""OLE"" style:family=""graphic"" style:hidden=""true""/>
+"	42		
+									D		"<style:style style:name=""Watermark"" style:family=""graphic"" style:hidden=""true""/>"	43		
+									E	m		100		
+									E	f		101		
+									E	im		102		
+									E	iq		103		
+									E	mt		104		
+									E	q		105		
+									F	cat		106		
+									F	cn		107		
+									F	qvs		108		
+									F	vn		109		
+									F	cl		110		
+									F	cp		111		
+									F	id		112		
+									F	periph		113		
+									F	rem		114		
+									F	_		115		
+									F	qs		116		
+									F	v		117		
+									F	vp		118		
+									F	c		119		
+									F	col		120		
+									F	span		121		
+									F		"<style:style style:name=""fig"" style:family=""graphic"" style:parent-style-name=""Graphics""> <style:graphic-properties style:wrap=""none"" style:vertical-pos=""top"" style:vertical-rel=""paragraph-content"" style:horizontal-pos=""center"" style:horizontal-rel=""paragraph-content"" style:mirror=""none"" fo:clip=""rect(0pt, 0pt, 0pt, 0pt)"" draw:luminance=""0%"" draw:contrast=""0%"" draw:red=""0%"" draw:green=""0%"" draw:blue=""0%"" draw:gamma=""100%"" draw:color-inversion=""false"" draw:image-opacity=""100%"" draw:color-mode=""standard"" loext:rel-width-rel=""paragraph"" loext:rel-height-rel=""paragraph""/> </style:style>"	122		
+									F	jmp		123		
+									F	w		124		
+									F	ts		125		
+									F	b		126		
+									F	b0		127		
+									F	b1		128		
+									F	b2		129		
+									F	b3		130		
+									F	b4		131		
+									F	b5		132		
+									F	b6		133		
+									F	b7		134		
+									F	b8		135		
+									F	b9		136		
+									F	cd		137		
+									F	cls		138		
+									F	d		139		
+									F	erq		140		
+									F	ib		141		
+									F	ib0		142		
+									F	ib1		143		
+									F	ib2		144		
+									F	ib3		145		
+									F	ib4		146		
+									F	ib5		147		
+									F	ib6		148		
+									F	ib7		149		
+									F	ib8		150		
+									F	ib9		151		
+									F	ie		152		
+									F	iex		153		
+									F	ili		154		
+									F	ili0		155		
+									F	ili1		156		
+									F	ili2		157		
+									F	ili3		158		
+									F	ili4		159		
+									F	ili5		160		
+									F	ili6		161		
+									F	ili7		162		
+									F	ili8		163		
+									F	ili9		164		
+									F	im0		165		
+									F	im1		166		
+									F	im2		167		
+									F	im3		168		
+									F	im4		169		
+									F	im5		170		
+									F	im6		171		
+									F	im7		172		
+									F	im8		173		
+									F	im9		174		
+									F	imi		175		
+									F	imi0		176		
+									F	imi1		177		
+									F	imi2		178		
+									F	imi3		179		
+									F	imi4		180		
+									F	imi5		181		
+									F	imi6		182		
+									F	imi7		183		
+									F	imi8		184		
+									F	imi9		185		
+									F	imq		186		
+									F	imt		187		
+									F	imt0		188		
+									F	imt1		189		
+									F	imt2		190		
+									F	imt3		191		
+									F	imt4		192		
+									F	imt5		193		
+									F	imt6		194		
+									F	imt7		195		
+									F	imt8		196		
+									F	imt9		197		
+									F	imte		198		
+									F	imte0		199		
+									F	imte1		200		
+									F	imte2		201		
+									F	imte3		202		
+									F	imte4		203		
+									F	imte5		204		
+									F	imte6		205		
+									F	imte7		206		
+									F	imte8		207		
+									F	imte9		208		
+									F	io		209		
+									F	io0		210		
+									F	io1		211		
+									F	io2		212		
+									F	io3		213		
+									F	io4		214		
+									F	io5		215		
+									F	io6		216		
+									F	io7		217		
+									F	io8		218		
+									F	io9		219		
+									F	iot		220		
+									F	ip		221		
+									F	ip0		222		
+									F	ip1		223		
+									F	ip2		224		
+									F	ip3		225		
+									F	ip4		226		
+									F	ip5		227		
+									F	ip6		228		
+									F	ip7		229		
+									F	ip8		230		
+									F	ip9		231		
+									F	ipi		232		
+									F	ipq		233		
+									F	ipr		234		
+									F	iq0		235		
+									F	iq1		236		
+									F	iq2		237		
+									F	iq3		238		
+									F	iq4		239		
+									F	iq5		240		
+									F	iq6		241		
+									F	iq7		242		
+									F	iq8		243		
+									F	iq9		244		
+									F	is		245		
+									F	is0		246		
+									F	is1		247		
+									F	is2		248		
+									F	is3		249		
+									F	is4		250		
+									F	is5		251		
+									F	is6		252		
+									F	is7		253		
+									F	is8		254		
+									F	is9		255		
+									F	k		256		
+									F	k0		257		
+									F	k1		258		
+									F	k2		259		
+									F	k3		260		
+									F	k4		261		
+									F	k5		262		
+									F	k6		263		
+									F	k7		264		
+									F	k8		265		
+									F	k9		266		
+									F	lf		267		
+									F	lh		268		
+									F	li		269		
+									F	li0		270		
+									F	li1		271		
+									F	li2		272		
+									F	li3		273		
+									F	li4		274		
+									F	li5		275		
+									F	li6		276		
+									F	li7		277		
+									F	li8		278		
+									F	li9		279		
+									F	lim		280		
+									F	lim0		281		
+									F	lim1		282		
+									F	lim2		283		
+									F	lim3		284		
+									F	lim4		285		
+									F	lim5		286		
+									F	lim6		287		
+									F	lim7		288		
+									F	lim8		289		
+									F	lim9		290		
+									F	lit		291		
+									F	mi		292		
+									F	mr		293		
+									F	ms		294		
+									F	ms0		295		
+									F	ms1		296		
+									F	ms2		297		
+									F	ms3		298		
+									F	ms4		299		
+									F	ms5		300		
+									F	ms6		301		
+									F	ms7		302		
+									F	ms8		303		
+									F	ms9		304		
+									F	mse		305		
+									F	mse0		306		
+									F	mse1		307		
+									F	mse2		308		
+									F	mse3		309		
+									F	mse4		310		
+									F	mse5		311		
+									F	mse6		312		
+									F	mse7		313		
+									F	mse8		314		
+									F	mse9		315		
+									F	mt0		316		
+									F	mt1		317		
+									F	mt2		318		
+									F	mt3		319		
+									F	mt4		320		
+									F	mt5		321		
+									F	mt6		322		
+									F	mt7		323		
+									F	mt8		324		
+									F	mt9		325		
+									F	mte		326		
+									F	mte0		327		
+									F	mte1		328		
+									F	mte2		329		
+									F	mte3		330		
+									F	mte4		331		
+									F	mte5		332		
+									F	mte6		333		
+									F	mte7		334		
+									F	mte8		335		
+									F	mte9		336		
+									F	nb		337		
+									F	p		338		
+									F	p0		339		
+									F	p1		340		
+									F	p2		341		
+									F	p3		342		
+									F	p4		343		
+									F	p5		344		
+									F	p6		345		
+									F	p7		346		
+									F	p8		347		
+									F	p9		348		
+									F	pb		349		
+									F	pb0		350		
+									F	pb1		351		
+									F	pc		352		
+									F	ph		353		
+									F	ph0		354		
+									F	ph1		355		
+									F	ph2		356		
+									F	ph3		357		
+									F	ph4		358		
+									F	ph5		359		
+									F	ph6		360		
+									F	ph7		361		
+									F	ph8		362		
+									F	ph9		363		
+									F	pi		364		
+									F	pi0		365		
+									F	pi1		366		
+									F	pi2		367		
+									F	pi3		368		
+									F	pi4		369		
+									F	pi5		370		
+									F	pi6		371		
+									F	pi7		372		
+									F	pi8		373		
+									F	pi9		374		
+									F	pm		375		
+									F	pmc		376		
+									F	pmo		377		
+									F	pmr		378		
+									F	po		379		
+									F	pr		380		
+									F	ps		381		
+									F	psi		382		
+									F	q0		383		
+									F	q1		384		
+									F	q2		385		
+									F	q3		386		
+									F	q4		387		
+									F	q5		388		
+									F	q6		389		
+									F	q7		390		
+									F	q8		391		
+									F	q9		392		
+									F	qa		393		
+									F	qc		394		
+									F	qd		395		
+									F	qm		396		
+									F	qm0		397		
+									F	qm1		398		
+									F	qm2		399		
+									F	qm3		400		
+									F	qm4		401		
+									F	qm5		402		
+									F	qm6		403		
+									F	qm7		404		
+									F	qm8		405		
+									F	qm9		406		
+									F	qr		407		
+									F	r		408		
+									F	s		409		
+									F	s0		410		
+									F	s1		411		
+									F	s2		412		
+									F	s3		413		
+									F	s4		414		
+									F	s5		415		
+									F	s6		416		
+									F	s7		417		
+									F	s8		418		
+									F	s9		419		
+									F	sd		420		
+									F	sd0		421		
+									F	sd1		422		
+									F	sd2		423		
+									F	sd3		424		
+									F	sd4		425		
+									F	sd5		426		
+									F	sd6		427		
+									F	sd7		428		
+									F	sd8		429		
+									F	sd9		430		
+									F	sp		431		
+									F	sr		432		
+									F	ef		433		
+									F	ex		434		
+									F	fdc		435		
+									F	fe		436		
+									F	fp		437		
+									F	fs		438		
+									F	x		439		
+									F	xdc		440		
+									F	xnt		441		
+									F	xot		442		
+									F	-		443		
+									F	+		444		
+									F	add		445		
+									F	addpn		446		
+									F	bd		447		
+									F	bdit		448		
+									F	bk		449		
+									F	ca		450		
+									F	dc		451		
+									F	em		452		
+									F	fk		453		
+									F	fl		454		
+									F	fm		455		
+									F	fq		456		
+									F	fqa		457		
+									F	fr		458		
+									F	ft		459		
+									F	fv		460		
+									F	fw		461		
+									F	ior		462		
+									F	iqt		463		
+									F	it		464		
+									F	ibd		465		
+									F	ino		466		
+									F	iem		467		
+									F	iti		468		
+									F	isb		469		
+									F	k		470		
+									F	lik		471		
+									F	litl		472		
+									F	liv		473		
+									F	liv0		474		
+									F	liv1		475		
+									F	liv2		476		
+									F	liv3		477		
+									F	liv4		478		
+									F	liv5		479		
+									F	liv6		480		
+									F	lIv7		481		
+									F	lIv8		482		
+									F	liv9		483		
+									F	n		484		
+									F	nd		485		
+									F	ndx		486		
+									F	nh		487		
+									F	nl		488		
+									F	no		489		
+									F	ord		490		
+									F	pn		491		
+									F	png		492		
+									F	pro		493		
+									F	qac		494		
+									F	qt		495		
+									F	rb		496		
+									F	rq		497		
+									F	rt		498		
+									F	sc		499		
+									F	sig		500		
+									F	sls		501		
+									F	sup		502		
+									F	tl		503		
+									F	va		504		
+									F	w		505		
+									F	wa		506		
+									F	wg		507		
+									F	wh		508		
+									F	wj		509		
+									F	wr		510		
+									F	xk		511		
+									F	xo		512		
+									F	xop		513		
+									F	xq		514		
+									F	xt		515		
+									F	xta		516		
+									F	tc0		517		
+									F	tc1		518		
+									F	tc2		519		
+									F	tc3		520		
+									F	tc4		521		
+									F	tc5		522		
+									F	tc6		523		
+									F	tc7		524		
+									F	tc8		525		
+									F	tc9		526		
+									F	tcc0		527		
+									F	tcc1		528		
+									F	tcc2		529		
+									F	tcc3		530		
+									F	tcc4		531		
+									F	tcc5		532		
+									F	tcc6		533		
+									F	tcc7		534		
+									F	tcc8		535		
+									F	tcc9		536		
+									F	tcr0		537		
+									F	tcr1		538		
+									F	tcr2		539		
+									F	tcr3		540		
+									F	tcr4		541		
+									F	tcr5		542		
+									F	tcr6		543		
+									F	tcr7		544		
+									F	tcr8		545		
+									F	tcr9		546		
+									F	th0		547		
+									F	th1		548		
+									F	th2		549		
+									F	th3		550		
+									F	th4		551		
+									F	th5		552		
+									F	th6		553		
+									F	th7		554		
+									F	th8		555		
+									F	th9		556		
+									F	thc0		557		
+									F	thc1		558		
+									F	thc2		559		
+									F	thc3		560		
+									F	thc4		561		
+									F	thc5		562		
+									F	thc6		563		
+									F	thc7		564		
+									F	thc8		565		
+									F	thc9		566		
+									F	thr0		567		
+									F	thr1		568		
+									F	thr2		569		
+									F	thr3		570		
+									F	thr4		571		
+									F	thr5		572		
+									F	thr6		573		
+									F	thr7		574		
+									F	thr8		575		
+									F	thr9		576		
+									F	toc		577		
+									F	toc1		578		
+									F	toc2		579		
+									F	toc3		580		
+									F	toc4		581		
+									F	toc5		582		
+									F	toc6		583		
+									F	toc7		584		
+									F	toc8		585		
+									F	toc9		586		
+									F	toc0		587		
+									F	toca		588		
+									F	toca1		589		
+									F	toca2		590		
+									F	toca3		591		
+									F	toca4		592		
+									F	toca5		593		
+									F	toca6		594		
+									F	toca7		595		
+									F	toca8		596		
+									F	toca9		597		
+									F	toca0		598		
+									F	tr		599		
+									F	tr0		600		
+									F	tr1		601		
+									F	tr2		602		
+									F	tr3		603		
+									F	tr4		604		
+									F	tr5		605		
+									F	tr6		606		
+									F	tr7		607		
+									F	tr8		608		
+									F	tr9		609		
+									G	Footer		610		
+									G	Header		611		
+									G		"=""<text:notes-configuration text:note-class=""""footnote"""" text:default-style-name=""""f"""" text:citation-style-name=""""""&Conf.$D$78&"""""" text:citation-body-style-name=""""""&Conf.$D$79&"""""" text:master-page-name=""""Footnote"""" style:num-format=""""""&Conf.$D$80&"""""" style:num-prefix=""""""&Conf.$D$84&"""""" style:num-suffix=""""""&Conf.$D$85&"""""" text:start-value=""""0"""" text:footnotes-position=""""page"""" text:start-numbering-at=""""""&Conf.$D$83&""""""/>"""	700		
+									G		</office:styles><office:automatic-styles>	701		
+									H		"<style:style style:name=""P1"" style:family=""paragraph"" style:parent-style-name=""m"" style:master-page-name=""Text""><style:paragraph-properties style:page-number=""auto""/></style:style>"	702		
+									H		"=""<style:page-layout style:name=""""text"""" style:page-usage=""""mirrored""""> <style:page-layout-properties fo:page-width=""""""&(Conf.$D$20/25.4*72)&""pt"""" fo:page-height=""""""&(Conf.$D$21/25.4*72)&""pt"""" style:num-format=""""1, 2, 3, ..."""" style:print-orientation=""""portrait"""" fo:margin-top=""""""&Conf.$D$23&""pt"""" fo:margin-bottom=""""""&Conf.$D$23&""pt"""" fo:margin-left=""""""&Conf.$D$22&""pt"""" fo:margin-right=""""""&Conf.$D$23&""pt"""" fo:border-top=""""""&IF(Conf.$I$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$64=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""0pt"""" fo:padding-bottom=""""0pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" style:register-truth-ref-style-name=""""'""&Conf.$D$27&""'"""" style:writing-mode=""""""&Conf.$D$137&"""""" draw:fill=""""""&$Conf.$D$32&"""""" draw:fill-color=""""#""&Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%"""" style:footnote-max-height=""""""&Conf.$L$83&""pt""""> <style:columns fo:column-count=""""1"""" fo:column-gap=""""0pt""""/> <style:footnote-sep style:width=""""""&Conf.$D$62&""pt"""" style:distance-before-sep=""""""&(Conf.$L$82/2)&""pt"""" style:distance-after-sep=""""""&(Conf.$L$82/2)&""pt"""" style:line-style=""""""&Conf.$L$60&"""""" style:adjustment=""""center"""" style:rel-width=""""98%"""" style:color=""""#""&Conf.$L$61&""""""/> </style:page-layout-properties>"""	703		
+									H		"=""<style:header-style> <style:header-footer-properties svg:height=""""""&Conf.$D$45&""pt"""" fo:margin-left=""""""&Conf.$D$41&""pt"""" fo:margin-right=""""""&Conf.$D$42&""pt"""" fo:margin-bottom=""""""&Conf.$D$43&""pt"""" fo:border-top=""""""&IF(Conf.$I$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$65=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""0pt"""" fo:padding-bottom=""""""&Conf.$D$43&""pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" fo:background-color=""""#""&Conf.$L$33&"""""" style:dynamic-spacing=""""""&Conf.$L$55&"""""" draw:fill=""""""&Conf.$D$32&"""""" draw:fill-color=""""#""&Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%""""/> </style:header-style> <style:footer-style> <style:header-footer-properties fo:min-height=""""""&Conf.$D$56&""pt"""" fo:margin-left=""""0pt"""" fo:margin-right=""""0pt"""" fo:margin-top=""""""&$Conf.$D$54&""pt"""" fo:border-top=""""""&IF(Conf.$I$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-bottom=""""""&IF(Conf.$J$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-left=""""""&IF(Conf.$K$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:border-right=""""""&IF(Conf.$L$66=""1"",$Conf.$D$62&""pt ""&Conf.$L$60&"" #""&Conf.$L$61&"""""""",""none"""""")&"" fo:padding-top=""""""&$Conf.$D$54&""pt"""" fo:padding-bottom=""""0pt"""" fo:padding-left=""""0pt"""" fo:padding-right=""""0pt"""" fo:background-color=""""#""&$Conf.$L$33&"""""" style:dynamic-spacing=""""""&$Conf.$L$55&"""""" draw:fill=""""""&$Conf.$D$32&"""""" draw:fill-color=""""#""&$Conf.$L$33&"""""" draw:opacity=""""""&(100-Conf.$D$35)&""%""""/> </style:footer-style>   </style:page-layout>"""	704		
+									H		"=""<style:style style:name=""""Body"""" style:family=""""section"""">   <style:section-properties fo:background-color=""""transparent"""" text:dont-balance-text-columns=""""false"""" style:editable=""""false""""> <style:columns fo:column-count=""""""&Conf.$D$11&"""""" fo:column-gap=""""""&Conf.$D$25&""pt""""> <style:column-sep style:width=""""""&Conf.$D$62&""pt"""" style:color=""""#""&$Conf.$L$61&"""""" style:height=""""99%"""" style:style=""""""&Conf.$L$60&""""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""0pt"""" fo:end-indent=""""""&Conf.$D$25/2&""pt""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""""&Conf.$D$25/2&""pt"""" fo:end-indent=""""0pt""""/> </style:columns>    <style:background-image/> <text:notes-configuration text:note-class=""""footnote""""/> <text:notes-configuration text:note-class=""""endnote""""/> </style:section-properties></style:style>"""	705		
+									H		"=""<style:style style:name=""""Span"""" style:family=""""section"""">  <style:section-properties fo:background-color=""""transparent"""" text:dont-balance-text-columns=""""false"""" style:editable=""""false""""> <style:columns fo:column-count=""""1""""> <style:column-sep style:width=""""0.26pt"""" style:color=""""#000000"""" style:height=""""99%"""" style:style=""""none""""/> <style:column style:rel-width=""""3620*"""" fo:start-indent=""""0pt"""" fo:end-indent=""""0pt""""/>  </style:columns>  <style:background-image/> <text:notes-configuration text:note-class=""""footnote""""/> <text:notes-configuration text:note-class=""""endnote""""/> </style:section-properties></style:style>"""	706		
+									H		</office:automatic-styles><office:master-styles>	707		
+									I		"<style:master-page style:name=""Standard"" style:hidden=""true"" style:page-layout-name=""text""/>"	708		
+									I		"<style:master-page style:name=""Endnote"" style:hidden=""true"" style:page-layout-name=""text""/>"	709		
+									I		"<style:master-page style:name=""Envelope"" style:hidden=""true"" style:page-layout-name=""span""/>"	710		
+									I		"<style:master-page style:name=""First_20_Page"" style:display-name=""First Page"" style:page-layout-name=""pm4"" style:next-style-name=""text""/>"	711		
+									I		"<style:master-page style:name=""Footnote"" style:hidden=""true"" style:page-layout-name=""text""/>"	712		
+									I		"<style:master-page style:name=""Footer"" style:hidden=""true"" style:page-layout-name=""text""/>"	713		
+									I		"<style:master-page style:name=""Header"" style:hidden=""true"" style:page-layout-name=""text""/>"	714		
+									I		"<style:master-page style:name=""HTML"" style:hidden=""true"" style:page-layout-name=""text""/>"	715		
+									I		"<style:master-page style:name=""Index"" style:hidden=""true"" style:page-layout-name=""text""/>"	716		
+									I		"<style:master-page style:name=""Landscape"" style:hidden=""true"" style:page-layout-name=""text""/>"	717		
+									I		"<style:master-page style:name=""Left_20_Page"" style:hidden=""true"" style:display-name=""Left Page"" style:page-layout-name=""text"" style:next-style-name=""Right_20_Page""/>"	718		
+									I		"<style:master-page style:name=""Right_20_Page"" style:hidden=""true"" style:display-name=""Right Page"" style:page-layout-name=""text"" style:next-style-name=""Left_20_Page""/>"	719		
+									I		"=""<style:master-page style:name=""""Text"""" style:page-layout-name=""""text"""">""&IF(Conf.$D$38=1,""<style:header> <text:p text:style-name=""""Header"""">""&$Conf.$D$47&""</text:p></style:header>""&IF(Conf.$D$39=1,"""",""<style:header-left> <text:p text:style-name=""""Header"""">""&$Conf.$D$48&""</text:p></style:header-left>""),"""")&IF(Conf.$D$49=1,""<style:footer> <text:p text:style-name=""""Footer"""">""&$Conf.$D$57&""</text:p></style:footer>""&IF(Conf.$D$50=1,"""",""<style:footer-left> <text:p text:style-name=""""Footer"""">""&$Conf.$D$58&""</text:p></style:footer-left>""),"""")&"" </style:master-page>"""	720		
+									I		</office:master-styles><office:body>	721		
+									J		<office:text>	800		
+									J		"=""<text:variable-decls>""&CONCAT($'Tag List'.$AS$2:$'Tag List'.$AS$1011)&""</text:variable-decls>"""	801		
+									J		<text:sequence-decls></text:sequence-decls>	802		
+									J		"<text:section text:style-name=""Span"" text:name=""Intro"">"	803		
+									J		"=""<text:p text:style-name=""""P1""""></text:p>"""	804		
+									J		</text:section>	805		
+									K		</office:text></office:body></office:document>	806		
+									K		 	807		
+									K		 	808		
+									K		 	809		
+									K		 	810		
+									K		 	811		
+									K		 	812		
+									K		 	813		
+									K		 	814		
+									K		" 
+"	815		
 											 			
 														
 														

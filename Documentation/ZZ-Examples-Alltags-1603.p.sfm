@@ -1,21 +1,249 @@
-\id Evangard all tags
+\id Xxx ‖ en-us ‖ p.sfm ‖ p.sfm all tags ‖ 
+\usfm 2601
 \ide UTF-8
-\m the next line is a chapter 1 tag
+\sts sts
+\mt7 Meta Tags
+\rem rem
+\h h Book Name
+\h0 h0 Even Outer H
+\h1 h1 Odd Outer H
+\h2 h2 Even Inner H
+\h3 h3 Odd Inner H
+\h4 h4 Even Center H
+\h5 h5 Odd Center H
+\h6 h6 Even Outer F
+\h7 h7 Odd Outer F
+\h8 h8 Even Inner F
+\h9 h9 Odd Inner F
+\m The following tags have been placed above this line and are present as variables: 
+\m ∖id : [{id}]
+\m ∖usfm : [{usfm}]
+\m ∖ide : [{ide}]
+\m ∖sts : [{sts}]
+\m ∖rem : [{rem}]
+\sd
+\m ∖h : [{h}]
+\m ∖h0 : [{h0}]
+\m ∖h1 : [{h1}]
+\m ∖h2 : [{h2}]
+\m ∖h3 : [{h3}]
+\m ∖h4 : [{h4}]
+\m ∖h5 : [{h5}]
+\m ∖h6 : [{h6}]
+\m ∖h7 : [{h7}]
+\m ∖h8 : [{h8}]
+\m ∖h9 : [{h9}] 
+\m The next lines are LO styles for the header and footer styles. These should not be used in p.sfm files, but are here for testing the stylesheet files made with Evangard are complete.
+\b
+\Footer Footer (Footer Text [LO])
+\Header Header (Header Text [LO])
+\sd
+\mt7 Title Tags.
+\ie
+\imt imt
+\b0
+\imt0 imt0
+\b0
+\imt1 imt1
+\b0
+\imt2 imt2
+\b0
+\imt3 imt3
+\b0
+\imt4 imt4
+\b0
+\imt5 imt5
+\b0
+\imt6 imt6
+\b0
+\imt7 imt7
+\b0
+\imt8 imt8
+\b0
+\imt9 imt9
+\b0
+\imte imte
+\b0
+\imte0 imte0
+\b0
+\imte1 imte1
+\b0
+\imte2 imte2
+\b0
+\imte3 imte3
+\b0
+\imte4 imte4
+\b0
+\imte5 imte5
+\b0
+\imte6 imte6
+\b0
+\imte7 imte7
+\b0
+\imte8 imte8
+\m The next line is an imte9.  In Early versions of p.sfm this tag is a meta tag that forces text flow into a single column. It may be replaced with a "∖ts Span" tag. imte9 to span columns is deprecated (still works, but may disappear.) Currently the tag ∖span should be used.
+\imte9 ~
+\m The previous line is an imte9
+\ie
+\b0
+\is is
+\b0
+\is0 is0
+\b0
+\is1 is1
+\b0
+\is2 is2
+\b0
+\is3 is3
+\b0
+\is4 is4
+\b0
+\is5 is5
+\b0
+\is6 is6
+\b0
+\is7 is7
+\b0
+\is8 is8
+\b0
+\is9 is9
+\b0
+\ms ms
+\b0
+\ms0 ms0
+\b0
+\ms1 ms1
+\b0
+\ms2 ms2
+\b0
+\ms3 ms3
+\b0
+\ms4 ms4
+\b0
+\ms5 ms5
+\b0
+\ms6 ms6
+\b0
+\ms7 ms7
+\b0
+\ms8 ms8
+\b0
+\ms9 ms9
+\b0
+\mse mse
+\b0
+\mse0 mse0
+\b0
+\mse1 mse1
+\b0
+\mse2 mse2
+\b0
+\mse3 mse3
+\b0
+\mse4 mse4
+\b0
+\mse5 mse5
+\b0
+\mse6 mse6
+\b0
+\mse7 mse7
+\b0
+\mse8 mse8
+\b0
+\mse9 mse9
+\b0
+\mt mt
+\b0
+\mt0 mt0
+\b0
+\mt1 mt1
+\b0
+\mt2 mt2
+\b0
+\mt3 mt3
+\b0
+\mt4 mt4
+\b0
+\mt5 mt5
+\b0
+\mt6 mt6
+\b0
+\mt7 mt7
+\b0
+\mt8 mt8
+\b0
+\mt9 mt9
+\b0
+\mte mte
+\b0
+\mte0 mte0
+\b0
+\mte1 mte1
+\b0
+\mte2 mte2
+\b0
+\mte3 mte3
+\b0
+\mte4 mte4
+\b0
+\mte5 mte5
+\b0
+\mte6 mte6
+\b0
+\mte7 mte7
+\b0
+\mte8 mte8
+\m The next line is an ∖mte9.  In Early versions of p.sfm this tag is a meta tag that forces text flow into a single column. It may be replaced with a "∖ts Span" tag. Using ∖mte9 to span columns is deprecated (still works, but may disappear.) Currently the tag ∖span should be used.
+\mte9 mte9
+\m The previous line is an ∖mte9.
+\ie
+\r r
+\b0
+\s s
+\b0
+\s0 s0
+\b0
+\s1 s1
+\b0
+\s2 s2
+\b0
+\s3 s3
+\b0
+\s4 s4
+\b0
+\s5 s5
+\b0
+\s6 s6
+\b0
+\s7 s7
+\b0
+\s8 s8
+\b0
+\s9 s9
+\b0
+\sp sp
+\b0
+\sr sr
+\m The next line is a span tag. This line should be inside a multicolumn area.
+\span
+\m This is the first line after a span tag.  This line should be in a single column area.
+\mt7 Chapter and Verse Tags
+\m the next line is a chapter 1 tag. In addition to default behavior "drop cap," chapter 1 tags also change text flow into multiple column mode if the style sheet is defined for multiple columns. 
 \c 1
 \m This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag. This is the first line after a chapter 1 tag.
-\mte9 ~
-\m the next line is a chapter 2 tag.
+\span
+\m the next line is a chapter 2 tag. chapter tags other than 1 have no effect on columnation
 \c 2
 \m This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag. This is the first line after a chapter 2 tag.
-\mte9 ~
+\span
 \m The next line is a Chapter 3 tag, with a chapter label.
-\c 3 
+\c 3
 \cl chapter 3
-\m This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. 
-\mte9 ~
-\m The next line is a Chapter 4 tag, with an Alternate chapter .
+\m This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag. This is the first line after a chapter 3 tag.
+\span
+\m The next line is a Chapter 4 tag, with an alternate chapter number.
 \c 4 \ca (5)\ca*
-\m This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. 
+\m This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag.
 \m The next line is a Chapter 6 tag, with a Published Chapter. and using ∖ie to split columns.
 \ie
 \c 6
@@ -23,22 +251,18 @@
 \m This is the first line after a chapter 6 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. This is the first line after a chapter 4 tag. 
 \m The next line is a Chapter 6 tag, with a Published Chapter.
 \mte9 ~
-\mte7 USFM and p.sfm Paragraphs 
+\m The next line is a ∖col tag
+\col
+\m This is text inside columns. This is text inside columns. 
+\p \v 1 This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. \v 2 This is text inside columns. This is text inside columns. Verse 3 (next) has a ∖va tag \v 3 \va (7)\va* This is text inside columns. This is text inside columns. This is text inside columns. The next verse 4 has a ∖vp tag. \v 4 \vp ⹏\vp* This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. 
+\span
+\The previous line is a ∖span tag. 
+\sd
+\mte7 USFM and p.sfm paragraph tags
 \cd cd
 \cls cls
 \d d
 \erq erq
-\h h
-\h0 h0
-\h1 h1
-\h2 h2
-\h3 h3
-\h4 h4
-\h5 h5
-\h6 h6
-\h7 h7
-\h8 h8
-\h9 h9
 \iex iex
 \ili ili
 \ili0 ili0
@@ -52,32 +276,28 @@
 \ili8 ili8
 \ili9 ili9
 \im im
+\im0 im0
+\im1 im1
+\im2 im2
+\im3 im3
+\im4 im4
+\im5 im5
+\im6 im6
+\im7 im7
+\im8 im8
+\im9 im9
 \imi imi
+\imi0 imi0
+\imi1 imi1
+\imi2 imi2
+\imi3 imi3
+\imi4 imi4
+\imi5 imi5
+\imi6 imi6
+\imi7 imi7
+\imi8 imi8
+\imi9 imi9
 \imq imq
-\imt imt
-\imt0 imt0
-\imt1 imt1
-\imt2 imt2
-\imt3 imt3
-\imt4 imt4
-\imt5 imt5
-\imt6 imt6
-\imt7 imt7
-\imt8 imt8
-\imt9 imt9
-\imte imte
-\imte0 imte0
-\imte1 imte1
-\imte2 imte2
-\imte3 imte3
-\imte4 imte4
-\imte5 imte5
-\imte6 imte6
-\imte7 imte7
-\imte8 imte8
-\m The next line is an imte9 
-\imte9 ~
-\m The previous line is an imte9
 \io io
 \io0 io0
 \io1 io1
@@ -91,6 +311,16 @@
 \io9 io9
 \iot iot
 \ip ip
+\ip0 ip0
+\ip1 ip1
+\ip2 ip2
+\ip3 ip3
+\ip4 ip4
+\ip5 ip5
+\ip6 ip6
+\ip7 ip7
+\ip8 ip8
+\ip9 ip9
 \ipi ipi
 \ipq ipq
 \ipr ipr
@@ -105,17 +335,7 @@
 \iq7 iq7
 \iq8 iq8
 \iq9 iq9
-\is is
-\is0 is0
-\is1 is1
-\is2 is2
-\is3 is3
-\is4 is4
-\is5 is5
-\is6 is6
-\is7 is7
-\is8 is8
-\is9 is9
+\k k 
 \k0 k0
 \k1 k1
 \k2 k2
@@ -128,64 +348,19 @@
 \k9 k9
 \li li
 \li0 li0
-\li0i li0i
 \li1 li1
-\li1i li1i
 \li2 li2
-\li2i li2i
 \li3 li3
-\li3i li3i
 \li4 li4
-\li4i li4i
 \li5 li5
-\li5i li5i
 \li6 li6
-\li6i li6i
 \li7 li7
-\li7i li7i
 \li8 li8
-\li8i li8i
 \li9 li9
-\li9i li9i
-\lii lii
 \lit lit
 \m m
-\maps maps
 \mi mi
 \mr mr
-\ms ms
-\ms0 ms0
-\ms1 ms1
-\ms2 ms2
-\ms3 ms3
-\ms4 ms4
-\ms5 ms5
-\ms6 ms6
-\ms7 ms7
-\ms8 ms8
-\ms9 ms9
-\mt mt
-\mt0 mt0
-\mt1 mt1
-\mt2 mt2
-\mt3 mt3
-\mt4 mt4
-\mt5 mt5
-\mt6 mt6
-\mt7 mt7
-\mt8 mt8
-\mt9 mt9
-\mte mte
-\mte0 mte0
-\mte1 mte1
-\mte2 mte2
-\mte3 mte3
-\mte4 mte4
-\mte5 mte5
-\mte6 mte6
-\mte7 mte7
-\mte8 mte8
-\mte9 mte9
 \nb nb
 \p p
 \p0 p0
@@ -198,19 +373,7 @@
 \p7 p7
 \p8 p8
 \p9 p9
-\m The next line is a ∖pb (page break) tag.
-\pb pb
-\m This is the first line after a ∖pb tag.
-\m The next line is a ∖pb0 (column break) tag.
-\pb0 pb
-\pb pb
-\m This is the first line after a ∖pb0 (column break) tag.
-\m The next line is a ∖pb1 (break to next odd page) tag
 \pc pc
-\m This is the first line after a ∖pb1 (break to next odd page) tag.
-\m The next line is a ∖periph tag.
-\periph periph
-\m This is the first line after a ∖periph tag.
 \ph ph
 \ph0 ph0
 \ph1 ph1
@@ -251,7 +414,6 @@
 \q7 q7
 \q8 q8
 \q9 q9
-\qa qa
 \qc qc
 \qm qm
 \qm0 qm0
@@ -265,101 +427,51 @@
 \qm8 qm8
 \qm9 qm9
 \qr qr
-\r r
-\rem rem
-\restore restore
-\s s
-\s0 s0
-\s1 s1
-\s2 s2
-\s3 s3
-\s4 s4
-\s5 s5
-\s6 s6
-\s7 s7
-\s8 s8
-\s9 s9
-\sp sp
-\m The next line is a ∖col tag
-\col
-\m This is text inside columns. This is text inside columns. 
-\p \v 1 This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. \v 2 This is text inside columns. This is text inside columns. Verse 3 (next) has a ∖va tag \v 3 \va (7)\va* This is text inside columns. This is text inside columns. This is text inside columns. The next verse 4 has a ∖vp tag. \v 4 \vp ⹏\vp* This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. This is text inside columns. 
+\mt7 Note Tags
+\ie
+\m This is a really long paragraph.\fs - \fl ∖fs Footnote Summary.\fs*\f + \fr fr \fk fk \ft ft This is a ∖f footnote. \fq fq \fv fv \fqa fqa. \f*\fp - \ft This is a 2nd paragraph in a foonote.\fp* This is a really long paragraph.\fe + \fr fr \fk fk \ft ft This is a ∖fe endnote. \fq fq \fv fv \fqa fqa. \fe* This is a really long paragraph. This is a really long paragraph. This is a really long paragraph.\ef + \fr fr \fk fk \ft ft This is a ∖ef extended footnote. \fq fq \fv fv \fqa fqa. \ef* This is a really long paragraph.\fm fm\fm* This is a really long paragraph. This is a really long paragraph.\fdc + \fr fr \fk fk \ft ft This is a ∖fdc deuterocanon footnote. \fq fq \fv fv \fqa fqa. \fdc* This is a really long paragraph. This is a really long paragraph. This is a really long paragraph.\x + \xo xo 1:1 \xk xk keyword. \xq xq this in an ∖x ref and this is ∖xq quote. \xt xt 1:2\x* This is a really long paragraph.\xot + \xo xo 1:1 \xk xk keyword. \xq xq this in an ∖xot ref and this is ∖xq quote. \xt xt 1:2\xot* This is a really long paragraph.\xnt + \xo xo 1:1 \xk xk keyword. \xq xq this in an ∖x ref and this is ∖xq quote. \xt xt 1:2\xnt* This is a really long paragraph.\xdc + \xo xo 1:1 \xk xk keyword. \xq xq this in an ∖x ref and this is ∖xq quote. \xt xt 1:2\xdc* This is a really long paragraph. This is a really long paragraph.\ex + \xo xo 1:1 \xq xq This is an ∖ex ref, and this is an ∖xq quote.\xt xt 1:2 \ex* This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. This is a really long paragraph. 
 \span
-\The previous line is a ∖span tag. 
-\sr sr
-\sts sts
-\toc toc
-\toc0 toc0
-\toc1 toc1
-\toc2 toc2
-\toc3 toc3
-\toc4 toc4
-\toc5 toc5
-\toc6 toc6
-\toc7 toc7
-\toc8 toc8
-\toc9 toc9
-\sd
+\mt7 Vertical Space Tags
 \m The next line is an ∖b tag.
 \b
-\sd
 \m The next line is an ∖b0 tag.
 \b0
-\sd
 \m The next line is an ∖b1 tag.
 \b1
-\sd
 \m The next line is an ∖b2 tag.
 \b2
-\sd
 \m The next line is an ∖b3 tag.
 \b3
-\sd
 \m The next line is an ∖b4 tag.
 \b4
-\sd
 \m The next line is an ∖b5 tag.
 \b5
-\sd
 \m The next line is an ∖b6 tag.
 \b6
-\sd
 \m The next line is an ∖b7 tag.
 \b7
-\sd
 \m The next line is an ∖b8 tag.
 \b8
-\sd
 \m The next line is an ∖b9 tag.
 \b9
-\sd
 \m The next line is an ∖ib tag.
 \ib
-\sd
 \m The next line is an ∖ib0 tag.
 \ib0
-\sd
 \m The next line is an ∖ib1 tag.
 \ib1
-\sd
 \m The next line is an ∖ib2 tag.
 \ib2
-\sd
 \m The next line is an ∖ib3 tag.
 \ib3
-\sd
 \m The next line is an ∖ib4 tag.
 \ib4
-\sd
 \m The next line is an ∖ib5 tag.
 \ib5
-\sd
 \m The next line is an ∖ib6 tag.
 \ib6
-\sd
 \m The next line is an ∖ib7 tag.
 \ib7
-\sd
 \m The next line is an ∖ib8 tag.
 \ib8
 \sd
@@ -367,37 +479,27 @@
 \ib9
 \m The next line is an ∖sd tag.
 \sd
-\sd
 \m The next line is an ∖sd0 tag.
 \sd0
-\sd
 \m The next line is an ∖sd1 tag.
 \sd1
-\sd
 \m The next line is an ∖sd2 tag.
 \sd2
-\sd
 \m The next line is an ∖sd3 tag.
 \sd3
-\sd
 \m The next line is an ∖sd4 tag.
 \sd4
-\sd
 \m The next line is an ∖sd5 tag.
 \sd5
-\sd
 \m The next line is an ∖sd6 tag.
 \sd6
-\sd
 \m The next line is an ∖sd7 tag.
 \sd7
-\sd
 \m The next line is an ∖sd8 tag.
 \sd8
-\sd
 \m The next line is an ∖sd9 tag.
 \sd9
-\sd
+\mt7 Tables
 \m The next line is a deprecated [∖rem Table ... ∖b ] table. 
 \rem Table |name="tables"|cols="7"|
 \tr \thc6 Right Align \thc6  \thc6 Centered \thc6  \thc6 Left align \thc6  \thc6 Text Style
@@ -427,22 +529,7 @@
 \tr \tcr9 ∖tcr9 \thr9 ∖thr9 \tcc9 ∖tcc9 \thc9 ∖thc9 \tc9 ∖tc9 \th9 ∖th9 \tc9 Heavy Italic Text
 \ts-e
 \sd
-\m The next lines are LO names for the header and footer styles
-\Footer Footer (footer Text [LO])
-\Header Header (Header Text [LO]
-\m The next lines are 'footnote opening' tags as paragraphs. 
-\ef ef
-\f f
-\fe fe
-\erq erq
-\esb esb
-\esbe esbe
-\ex ex
-\x x
-\xdc xdc
-\xnt xnt
-\xot xot
-\sd
+\mt7 Figure Tags
 \m The next line is a pc + fig tag.
 \pc \fig Table (20pt x 20pt)|Figs/Key1.svg|col||||\fig*
 \m This is the first line after a pc + fig tag.
@@ -460,35 +547,54 @@
 \m  [\_ _\_*]  [\add add (added text) \add*] [\bd bd (bold) \bd*] [\bdit bdit (bold italic)\bdit*] [\bk bk (book title) \bk*] [\ca ca (alternate chapter number)\ca*] 
 \m [\cat cat (category) \cat*] 
 \m [\dc dc Deuterocanon \dc*] [\em em (emphasized) \em*]  [\ior ior (into outline reference)\ior*] [\iqt iqt (intro quote) \iqt*] [\it it (italic) \it*] [\k k (keyword) \k*] [\liv liv\liv*] [\litl litl \litl*] [\liv0 liv0\liv0*] [\liv1 liv1\liv1*] [\liv2 liv2\liv2*] [\liv3 liv3\liv3*] [\liv4 liv4\liv4*] [\liv5 liv5\liv5*] [\liv6 liv6\liv6*] [\liv7 liv7\liv7*] [\liv8 liv8\liv8*] [\liv9 liv9\liv9*] [\nd nd Name of diety \nd*] [\ndx ndx Index \ndx*]  [\no no (normal text)\no*] [\ord ord (ordinal)\ord*] [\pn pn (proper name) \pn*] [\png png (geographic name)\png*] [\pro pro (pronunciation)\pro*] [\qac qac (inline acrostic)\qac*] [\qs qs (selah)\qs*] [\qt qt (quoted text)\qt*] [\rq (quote reference) rq\rq*] [\sc sc (Small Caps)\sc*] [\sig sig (signature)\sig*] [\sls sls (alternate language)\sls*] [\tl tl (transliterated word, Latin.)\tl*] [\w w (word)\w*] [\wa wa (Aramaic Word ﹠ font)\wa*][\wg wg (Greek Word ﹠ font.)\wg*] [\wh wh (Hebrew word ﹠ font)\wh*] [\wj wj (words of Jesus)\wj*] [\wr wr (auxiliary word ﹠ font.)\wr*] 
-\mt7 p.sfm Character tags
-\m [\n n (note : handwriting) \n*] [\nh nh (note: heavy handwriting) \nh*] [\nl nl (note: light handwriting) \nl*] [\ibd ibd (sans bold) \ibd*] [\iem iem (sans bold italic)\iem*] [\ino ino (sans regular text)\ino*] [\isb isb (sans text semibold) \isb*] [\iti iti (sans text italic.)\iti*]
-\m These tags are now obsolete and not allowed in a sfm file.
+\mt7 p.sfm Word tags
+\m [\n n (note : handwriting) \n*] [\nh nh (note: heavy handwriting) \nh*] [\nl nl (note: light handwriting) \nl*] [\ibd ibd (sans bold) \ibd*] [\iem iem (sans bold italic)\iem*] [\ino ino (sans regular text)\ino*] [\isb isb (sans semibold) \isb*] [\iti iti (sans text italic.)\iti*]
+\mt7 Page breaking Tags
+\m The next line is a ∖pb (page break) tag.
+\pb
+\m This is the first line after a ∖pb tag.
+\ie
+\m The next line is a ∖pb0 (column break) tag.
+\pb0
+\m This is the first line after a ∖pb0 (column break) tag.
+\span
+\m The next line is a ∖pb1 (break to next odd page) tag. LibreOffice doesn't seem to support it, but I'm keeping it.
+\pb1
+\m This is the first line after a ∖pb1 (break to next odd page) tag.
+\m The next line is a ∖periph tag.
+\periph periph
+\m This is the first line after a ∖periph tag.
+\m The next line is an ∖id tag. This tag page breaks based on the setting in Evangard config tab.
+\id id
+\m This is the first line after a ∖id tag.
+\mt7 Obsolete Tags (that break USFM clients)
+\m These tags are now obsolete and not allowed in a valid sfm file.
 \li0 ∖conc conc
 \li0 ∖cov cov
 \li0 ∖glo glo
 \li0 ∖intro intro
 \li0 ∖idx idx
+\li0 ∖maps maps
 \li0 ∖pref pref
 \li0 ∖pub pub
 \li0 ∖pubinfo pubinfo
+\li0 ∖restore restore
 \li0 ∖spine spine
-\li0 [∖+ +∖+*]
-\li0 [∖~ ~∖~*]
-\li0 [∖- -∖-*]
-\m These tags I'm not testing right now. 
+\mt7 Parking lot
+\m The next lines are 'footnote opening' tags as regular line tags. Note that erq, esb are listed here, and do not have proper handling yet. 
+\ef ef
+\f f
+\fe fe
+\erq erq
+\esb esb
+\esbe esbe
+\ex ex
+\x x
+\xdc xdc
+\xnt xnt
+\xot xot
+\m These are tags I'm not testing right now. 
 \m ∖rb ruby text
 \m [∖rt rt (ruby annotation)∖rt*]
-\m These tags aren't working as regular character styles... only in annotations (which they belong, but there's a bug hiding here: 
-\li0 [∖fk fk∖fk*]
-\li0 [∖fl fl ∖fl*]
-\li0 [∖fm fm ∖fm*]
-\li0 [∖fq fq∖fq*]
-\li0 [∖fqa fqa∖fqa*]
-\li0 [∖fr fr∖fr*]
-\li0 [∖ft ft∖ft*]
-\li0 [∖fv fv∖fv*]
-\li0  [∖xk xk∖xk*]
-\li0 [∖xo xo∖xo*]
-\li0 [∖xq xq∖xq*]
-\li0 [∖xt xt∖xt*]
-\li0 [∖xta xta ∖xta*]
+\m These footnote word tags aren't working as body text word tags. They only work in annotations (which they belong, but there's a bug hiding here: 
+\li0 [∖fk fk∖fk*] [∖fl fl ∖fl*] [∖fm fm ∖fm*] [∖fq fq∖fq*] [∖fqa fqa∖fqa*] [∖fr fr∖fr*] [∖ft ft∖ft*] [∖fv fv∖fv*] [∖xk xk∖xk*] [∖xo xo∖xo*] [∖xq xq∖xq*] [∖xt xt∖xt*] [∖xta xta ∖xta*]
